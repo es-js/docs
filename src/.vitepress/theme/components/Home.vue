@@ -78,7 +78,8 @@ br {
 
 .feature {
   @apply flex flex-col py-6 px-6 space-y-2
-  bg-gray-50 dark:bg-gray-800
+  bg-white dark:bg-gray-800
+  lg:bg-opacity-50 lg:dark:bg-opacity-50
   border border-gray-200 dark:border-gray-700
   rounded-xl;
 }

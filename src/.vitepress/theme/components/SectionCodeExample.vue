@@ -63,21 +63,27 @@ const openUrl = computed(
     </div>
 
     <div class="flex flex-col justify-center">
-      <div class="-mt-[16px] md:mt-0 mx-4 md:mx-0 bg-gray-100 dark:bg-gray-800 rounded-b-lg md:rounded-b-0 md:rounded-r-lg p-4">
-        <EsEjecutar :hide-preview="props.hidePreview" :hide-console="props.hideConsole" :hide-options="props.hideOptions" :height="props.playHeight" :show-open-button="props.showOpenButton">
-          <slot />
-        </EsEjecutar>
-      </div>
+      <EsEjecutar :hide-preview="props.hidePreview" :hide-console="props.hideConsole" :hide-options="props.hideOptions" :height="props.playHeight" :show-open-button="props.showOpenButton">
+        <slot />
+      </EsEjecutar>
     </div>
   </div>
 
   <a :href="openUrl" target="_blank" class="text-center block mt-1">
-    <span class="inline-block bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-lg px-4 py-2">
-      Abrir ejemplo en EsJS Editor
-    </span>
+    <div class="open-editor-button">
+      <span>Abrir ejemplo en EsJS Editor</span>
+      <span class="inline-block ml-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z" /></svg>
+      </span>
+    </div>
   </a>
 </template>
 
 <style scoped>
-
+.open-editor-button {
+  @apply inline-flex items-center justify-center
+  bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700
+  border border-gray-300 dark:border-gray-700
+  rounded-lg px-4 py-2;
+}
 </style>

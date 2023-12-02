@@ -30,9 +30,9 @@
 
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: -webkit-linear-gradient(
-            120deg,
-            #9C27B0 5%,
-            #651FFF
+        120deg,
+        #9C27B0 5%,
+        #651FFF
     );
 }
 
@@ -46,12 +46,12 @@
 .accent {
     background: var(--vp-home-hero-name-background);
     -webkit-background-clip: text;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /** Vitepress */
 
+/** Normal button */
 .action {
     @apply px-4 xl:px-5 py-2 xl:py-2.5 inline-block
     text-center font-bold
@@ -62,20 +62,27 @@
     rounded-3xl;
 }
 
+/** Primary button */
 .action.primary {
-    @apply bg-violet-600 hover:bg-violet-500
-    text-white
-    border-violet-500
+    @apply text-white;
+    background-color: var(--vp-c-brand);
+}
+.action.primary:hover {
+    background-color: var(--vp-c-brand-dark);
 }
 
 .dark .action.primary {
-    @apply bg-violet-700 hover:bg-violet-600
-    text-violet-50
-    border-violet-600
+    @apply text-violet-50;
+    background-color: var(--vp-c-brand-dark);
+    border-color: var(--vp-c-brand-darker);
+}
+.dark .action.primary:hover {
+    background-color: var(--vp-c-brand-darker);
 }
 
+/** Code block */
 .lang {
-    @apply text-gray-200 !important
+    @apply text-gray-400 !important
 }
 
 .vp-doc div[class*='language-'] {
@@ -85,36 +92,4 @@
 /** Content on Home */
 .VPContent.is-home {
     padding-top: 0 !important;
-}
-
-/** Navbar */
-:root {
-    --vp-nav-bg-color: rgba(255, 255, 255, 0.5);
-}
-
-.dark {
-    --vp-nav-bg-color: rgba(30, 30, 32, 0.5);
-}
-
-.curtain {
-    display: none !important;
-}
-
-.fill {
-    background: transparent !important;
-}
-
-.content-body {
-    background: var(--nav-c-bg) !important;
-}
-
-.content-body::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    backdrop-filter: saturate(180%) blur(5px);
-    z-index: -1;
 }

@@ -10,7 +10,7 @@ import Home from '@theme/components/Home.vue';
 import SectionCodeExample from '@theme/components/SectionCodeExample.vue';
 </script>
 
-<Home />
+<Home class="relative" />
 
 <div class="max-w-7xl mx-auto px-3">
 

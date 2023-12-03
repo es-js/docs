@@ -2,7 +2,6 @@ import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
 import { defineConfigWithTheme } from 'vitepress'
-import { getHighlighter } from 'shikiji'
 // @ts-expect-error - esjsSyntax is a json file
 import esjsSyntax from '@es-js/language-tools/esjs.tmLanguage.json' assert {type: 'json'}
 import { metaData } from './constants'
@@ -18,17 +17,6 @@ export default async () => {
     name: 'esjs',
     scopeName: 'source.esjs',
   }
-
-  const highlighter = await getHighlighter({
-    langs: [
-      'javascript',
-      esjsLanguage,
-    ],
-    themes: [
-      'vitesse-light',
-      'vitesse-dark',
-    ],
-  })
 
   const defaultSidebar = [
     {
@@ -98,15 +86,13 @@ export default async () => {
       title: metaData.title,
       description: metaData.description,
       markdown: {
-        highlight: (str: string, lang: string, attrs: string) => {
-          return highlighter.codeToHtml(str, {
-            lang,
-            themes: {
-              light: 'vitesse-light',
-              dark: 'vitesse-dark',
-            },
-          })
+        theme: {
+          light: 'vitesse-light',
+          dark: 'vitesse-dark',
         },
+        languages: [
+          esjsLanguage,
+        ],
       },
       cleanUrls: true,
 

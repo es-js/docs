@@ -38,7 +38,7 @@ La sintaxis de los comentarios es la misma que en C++ y en muchos otros lenguaje
 
 Los comentarios se comportan como espacios en blanco y se descartan durante la ejecución del script.
 
-## Declaraciones
+## Variables
 
 EsJS tiene tres tipos de declaraciones de variables.
 
@@ -189,7 +189,7 @@ En consecuencia, puedes acceder a las variables globales declaradas en una «ven
 
 Además, las variables globales tienen un mecanismo asociado como Elevación (_hoisting_). Puedes conocer más sobre este mecanismo en [Elevación](/avanzado/elevacion)
 
-### Constantes
+## Constantes
 
 Puedes crear una constante de solo lectura con nombre con la palabra clave `const`.
 
@@ -251,9 +251,7 @@ consola.escribir(MI_ARREGLO); // Muestra ['HTML','CSS','JavaScript','EsJS'];
 >
 > </InlinePlayground>
 
-## Estructuras y tipos de datos
-
-### Tipos de datos
+## Tipos de datos
 
 EsJS define ocho tipos de datos:
 
@@ -358,13 +356,13 @@ consola.escribir(xConvertido + 23);
 
 Los _literales_ representan valores en EsJS. Estos son valores fijos, no variables, que _literalmente_ proporcionas en tu script. Esta sección describe los siguientes tipos de literales:
 
--   [Arreglos literales](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_Types#arreglos_literales)
--   [Booleanos literales](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_Types#booleanos_literales)
--   [Literales de coma flotante](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_Types#literales_de_coma_flotante)
--   [Literales numéricos](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_Types#literales_numericos)
--   [Objetos literales](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_Types#objetos_literales)
--   [RegExp literales](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_Types#regexp_literales)
--   [Cadenas literales](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_Types#cadenas_literales)
+-   [Arreglos literales](#arreglos-literales)
+-   [Booleanos literales](#booleanos-literales)
+-   [Literales de coma flotante](#literales-de-coma-flotante)
+-   [Literales numéricos](#literales-numericos)
+-   [Objetos literales](#objetos-literales)
+-   [RegExp literales](#expresiones-regulares-«regexp»-literales)
+-   [Cadenas literales](#cadenas-literales)
 
 ### Arreglos literales
 

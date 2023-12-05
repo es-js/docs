@@ -14,12 +14,12 @@
             <h1 class="tagline">
               <span class="accent">EsJS</span>
               <br>
-              JavaScript con sintaxis en Español
+              Lenguaje de programación en Español
             </h1>
 
             <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 space-x-0 md:space-x-2">
               <a
-                href="/guia/empezando"
+                href="/introduccion"
                 title="Empezar a programar con EsJS"
                 class="action primary"
               >

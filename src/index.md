@@ -16,7 +16,7 @@ import SectionCodeExample from '@theme/components/SectionCodeExample.vue';
 
 <div class="w-full h-20"></div>
 
-<SectionCodeExample title="Crea y ejecuta algoritmos en Español" description="Escribe código en Español y ejecútalo en JavaScript." hide-console="false" hide-preview="true">
+<SectionCodeExample title="JavaScript con sintaxis en Español" description="Escribe código en Español y ejecútalo en JavaScript." hide-console="false" hide-preview="true">
 
 <!--@include: ./public/codigos/fibonacci.md -->
 

@@ -20,62 +20,81 @@ export default async () => {
 
   const defaultSidebar = [
     {
-      text: 'Introducción',
+      text: 'Empezando',
       items: [
-        { text: '¿Por qué usar EsJS?', link: '/guia/por-que-usar-esjs' },
-        { text: 'Empezando', link: '/guia/empezando' },
+        {
+          items: [
+            { text: 'Introducción', link: '/introduccion' },
+            { text: 'Primeros pasos', link: '/primeros-pasos' },
+          ],
+        },
       ],
     },
 
     {
       text: 'Guía EsJS',
       items: [
-        { text: 'Introducción', link: '/guia/introduccion' },
-        { text: 'Gramática y Tipos', link: '/guia/gramatica-y-tipos' },
-        { text: 'Control del flujo y manejo de errores', link: '/guia/control-del-flujo-y-manejo-de-errores' },
-        { text: 'Bucles e iteración', link: '/guia/bucles-e-iteracion' },
-        { text: 'Funciones', link: '/guia/funciones' },
-        { text: 'Expresiones y operadores', link: '/guia/expresiones-y-operadores' },
-        { text: 'Números y fechas', link: '/guia/numeros-y-fechas' },
-        { text: 'Formato de texto', link: '/guia/formato-de-texto' },
+        {
+          items: [
+            { text: 'Gramática y Tipos', link: '/guia/gramatica-y-tipos' },
+            { text: 'Control del flujo y manejo de errores', link: '/guia/control-del-flujo-y-manejo-de-errores' },
+            { text: 'Bucles e iteración', link: '/guia/bucles-e-iteracion' },
+            { text: 'Funciones', link: '/guia/funciones' },
+            { text: 'Expresiones y operadores', link: '/guia/expresiones-y-operadores' },
+            { text: 'Números y fechas', link: '/guia/numeros-y-fechas' },
+            { text: 'Formato de texto', link: '/guia/formato-de-texto' },
+          ],
+        },
       ],
     },
 
     {
       text: 'Sintaxis',
       items: [
-        { text: 'Palabras reservadas', link: '/sintaxis/palabras-reservadas' },
-        { text: 'Comentarios', link: '/sintaxis/comentarios' },
-        { text: 'Variables', link: '/sintaxis/variables' },
-        { text: 'Constantes', link: '/sintaxis/constantes' },
-        { text: 'Operadores', link: '/sintaxis/operadores' },
-        { text: 'Condición si ... sino', link: '/sintaxis/condicion-si' },
-        { text: 'Declaración elegir', link: '/sintaxis/elegir' },
-        { text: 'Bucle para', link: '/sintaxis/para' },
-        { text: 'Bucle mientras', link: '/sintaxis/mientras' },
-        { text: 'Bucle hacer ... mientras', link: '/sintaxis/hacer-mientras' },
-        { text: 'Módulos', link: '/sintaxis/modulos' },
+        {
+          items: [
+            { text: 'Palabras reservadas', link: '/sintaxis/palabras-reservadas' },
+            { text: 'Comentarios', link: '/sintaxis/comentarios' },
+            { text: 'Variables', link: '/sintaxis/variables' },
+            { text: 'Constantes', link: '/sintaxis/constantes' },
+            { text: 'Operadores', link: '/sintaxis/operadores' },
+            { text: 'Condición si ... sino', link: '/sintaxis/condicion-si' },
+            { text: 'Declaración elegir', link: '/sintaxis/elegir' },
+            { text: 'Bucle para', link: '/sintaxis/para' },
+            { text: 'Bucle mientras', link: '/sintaxis/mientras' },
+            { text: 'Bucle hacer ... mientras', link: '/sintaxis/hacer-mientras' },
+            { text: 'Módulos', link: '/sintaxis/modulos' },
+          ],
+        },
       ],
     },
 
     {
       text: 'Tipos de datos',
       items: [
-        { text: 'Booleano', link: '/tipos-de-datos/booleano' },
-        { text: 'nulo', link: '/tipos-de-datos/nulo' },
-        { text: 'Numero', link: '/tipos-de-datos/numero' },
-        { text: 'Cadena', link: '/tipos-de-datos/cadena' },
-        { text: 'Objeto', link: '/tipos-de-datos/objeto' },
-        { text: 'Matriz', link: '/tipos-de-datos/matriz' },
-        { text: 'funcion', link: '/tipos-de-datos/funcion' },
-        { text: 'Simbolo', link: '/tipos-de-datos/simbolo' },
+        {
+          items: [
+            { text: 'Booleano', link: '/tipos-de-datos/booleano' },
+            { text: 'nulo', link: '/tipos-de-datos/nulo' },
+            { text: 'Numero', link: '/tipos-de-datos/numero' },
+            { text: 'Cadena', link: '/tipos-de-datos/cadena' },
+            { text: 'Objeto', link: '/tipos-de-datos/objeto' },
+            { text: 'Matriz', link: '/tipos-de-datos/matriz' },
+            { text: 'funcion', link: '/tipos-de-datos/funcion' },
+            { text: 'Simbolo', link: '/tipos-de-datos/simbolo' },
+          ],
+        },
       ],
     },
 
     {
       text: 'Avanzado',
       items: [
-        { text: 'Elevación', link: '/avanzado/elevacion' },
+        {
+          items: [
+            { text: 'Elevación', link: '/avanzado/elevacion' },
+          ],
+        },
       ],
     },
   ]
@@ -126,6 +145,11 @@ export default async () => {
         ],
       ],
 
+      rewrites: {
+        '/guia/introduccion.md': '/introduccion.md',
+        '/guia/empezando.md': '/primeros-pasos.md',
+      },
+
       themeConfig: {
         logo: '/assets/logo.png',
 
@@ -138,12 +162,10 @@ export default async () => {
         ],
 
         sidebar: {
+          '/': defaultSidebar,
           '/guia/': defaultSidebar,
-
           '/sintaxis/': defaultSidebar,
-
           '/tipos-de-datos/': defaultSidebar,
-
           '/avanzado/': defaultSidebar,
 
           '/ecosistema/': [
@@ -164,7 +186,7 @@ export default async () => {
         },
 
         socialLinks: [
-          { icon: 'discord', link: 'https://discord.gg/QeNt3ZvZ' },
+          { icon: 'discord', link: 'https://discord.gg/UgKC4RYj' },
           { icon: 'github', link: 'https://github.com/es-js/esjs' },
         ],
 

@@ -1,9 +1,6 @@
 ```esjs
-importar {
-  html,
-  reactive,
-} desde "https://cdn.jsdelivr.net/npm/@arrow-js/core@1.0.0-alpha.9/+esm"
-importar { setup } desde "https://cdn.jsdelivr.net/npm/twind/shim/+esm"
+importar { html, reactive } desde "npm/@arrow-js/core/+esm"
+importar { setup } desde "npm/twind/shim/+esm"
 
 const datos = reactive({
   numero: "",
@@ -29,20 +26,22 @@ funcion calcular() {
   datos.calculos = []
 }
 
+funcion operar(op) {
+  si (datos.numero) {
+    datos.calculos.agregar(interpretarDecimal(datos.numero))
+    datos.calculos.agregar(op)
+    datos.numero = ""
+  }
+}
+
 const operacion = (op) => {
   retornar html`<button class="p-2 bg-indigo-100 hover:bg-indigo-200 rounded"
-    @click="${() => {
-      if (datos.numero) {
-        datos.calculos.push(parseFloat(datos.numero), op)
-        datos.numero = ""
-      }
-    }}"
-  >
+    @click="${() => operar(op)}">
     ${op}
   </button>`
 }
 
-const limpiar = () => {
+funcion limpiar() {
   datos.numero = ""
   datos.calculos = []
 }
@@ -72,8 +71,7 @@ const plantilla = html`
     </p>
 
     <div class="w-60 bg-white border rounded">
-      <div class="w-full h-10 grid items-center px-2 text-xl text-right border-b">${() =>
-        datos.numero}</div>
+      <div class="w-full h-10 grid items-center px-2 text-xl text-right border-b">${() => datos.numero}</div>
       <div class="w-full h-8 grid items-center px-2 bg-gray-100 text-sm text-right">
         ${() => datos.calculos.join(" ") + " " + datos.numero}
       </div>

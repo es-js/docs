@@ -24,6 +24,14 @@ import SectionCodeExample from '@theme/components/SectionCodeExample.vue';
 
 <div class="w-full h-20"></div>
 
+<SectionCodeExample title="Modo Terminal" description="Ejecuta código en una interfaz sencilla." hide-console="true" hide-preview="false">
+
+<!--@include: ./public/codigos/terminal.md -->
+
+</SectionCodeExample>
+
+<div class="w-full h-20"></div>
+
 <SectionCodeExample title="Aprovecha la potencia de JavaScript" description="EsJS está basado en JavaScript, por lo que puedes utilizar todas las librerías y frameworks que ya conoces." hide-console="true" hide-preview="false" play-height="30rem">
 
 <!--@include: ./public/codigos/calculadora.md -->

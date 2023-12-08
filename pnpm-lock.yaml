@@ -9,8 +9,8 @@ devDependencies:
     specifier: ^0.34.2
     version: 0.34.2(eslint@8.46.0)(typescript@5.3.2)
   '@es-js/docs-components':
-    specifier: ^0.0.18
-    version: 0.0.18(@iconify/vue@4.1.1)(vue@3.3.4)
+    specifier: ^0.0.20
+    version: 0.0.20(@iconify/vue@4.1.1)(vue@3.3.4)
   '@es-js/language-tools':
     specifier: ^0.0.15
     version: 0.0.15
@@ -729,8 +729,8 @@ packages:
       - '@algolia/client-search'
     dev: true
 
-  /@es-js/docs-components@0.0.18(@iconify/vue@4.1.1)(vue@3.3.4):
-    resolution: {integrity: sha512-QigMa7xoWTXiSyV4QKpveP7tbHc7x/yxLGhN+KWmbdCC96tNaWFzDtRITw+kIL+334xEo6iH2Og23mNSUyV97g==}
+  /@es-js/docs-components@0.0.20(@iconify/vue@4.1.1)(vue@3.3.4):
+    resolution: {integrity: sha512-QMMdrE3ZwNhzjua843xlaRAdc2O/fFpzeYPOWkeF+MS0sCID2wJhCQqqGQUV2Otyhqj84lWJc96tDjti1nex+g==}
     peerDependencies:
       '@iconify/vue': ^4.0.2
       vue: ^3.2.25

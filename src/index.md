@@ -16,7 +16,7 @@ import SectionCodeExample from '@theme/components/SectionCodeExample.vue';
 
 <div class="w-full h-20"></div>
 
-<SectionCodeExample title="JavaScript con sintaxis en Español" description="Escribe código en Español y ejecútalo en JavaScript." hide-console="false" hide-preview="true">
+<SectionCodeExample title="JavaScript con sintaxis en Español" description="Escribe código en Español y ejecútalo en JavaScript." hide-console="false" hide-preview="true" browser-window-url="/fibonacci.esjs">
 
 <!--@include: ./public/codigos/fibonacci.md -->
 
@@ -24,7 +24,7 @@ import SectionCodeExample from '@theme/components/SectionCodeExample.vue';
 
 <div class="w-full h-20"></div>
 
-<SectionCodeExample title="Modo Terminal" description="Ejecuta código en una interfaz sencilla." hide-console="true" hide-preview="false">
+<SectionCodeExample title="Modo Terminal" description="Ejecuta código en una interfaz sencilla." hide-console="true" hide-preview="false" play-height="10rem" browser-window-url="/terminal.esjs">
 
 <!--@include: ./public/codigos/terminal.md -->
 
@@ -32,7 +32,7 @@ import SectionCodeExample from '@theme/components/SectionCodeExample.vue';
 
 <div class="w-full h-20"></div>
 
-<SectionCodeExample title="Aprovecha la potencia de JavaScript" description="EsJS está basado en JavaScript, por lo que puedes utilizar todas las librerías y frameworks que ya conoces." hide-console="true" hide-preview="false" play-height="30rem">
+<SectionCodeExample title="Aprovecha la potencia de JavaScript" description="EsJS está basado en JavaScript, por lo que puedes utilizar todas las librerías y frameworks que ya conoces." hide-console="true" hide-preview="false" play-height="30rem" browser-window-url="/calculadora.esjs">
 
 <!--@include: ./public/codigos/calculadora.md -->
 

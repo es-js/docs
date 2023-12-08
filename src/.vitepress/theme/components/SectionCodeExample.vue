@@ -32,6 +32,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  browserWindowUrl: {
+    type: String,
+    default: '/',
+  },
 })
 
 const codeSlot: Ref<null | HTMLElement> = ref(null)
@@ -57,13 +61,22 @@ const openUrl = computed(
     {{ props.description }}
   </p>
 
-  <div class="vp-doc grid grid-cols-1 md:grid-cols-2">
+  <div class="vp-doc grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-2">
     <div ref="codeSlot" class="flex flex-col justify-center max-h-[42rem] max-w-[85%] sm:max-w-[100%] mx-auto sm:mx-0">
       <slot />
     </div>
 
     <div class="flex flex-col justify-center">
-      <EsEjecutar :hide-preview="props.hidePreview" :hide-console="props.hideConsole" :hide-options="props.hideOptions" :height="props.playHeight" :show-open-button="props.showOpenButton">
+      <EsEjecutar
+        :hide-preview="props.hidePreview"
+        :hide-console="props.hideConsole"
+        :hide-options="props.hideOptions"
+        :height="props.playHeight"
+        :show-open-button="props.showOpenButton"
+        browser-window
+        :browser-window-url="props.browserWindowUrl"
+        class="my-0"
+      >
         <slot />
       </EsEjecutar>
     </div>

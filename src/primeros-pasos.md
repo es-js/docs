@@ -16,7 +16,7 @@ npm create esjs
 Una vez que se haya creado el proyecto, puedes ejecutarlo con el siguiente comando:
 
 ```bash
-npm dev
+npm run dev
 ```
 
 ## Prueba en línea

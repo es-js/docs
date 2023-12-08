@@ -186,7 +186,7 @@ export default async () => {
         },
 
         socialLinks: [
-          { icon: 'discord', link: 'https://discord.gg/UgKC4RYj' },
+          { icon: 'discord', link: 'https://discord.gg/BG4NuwQyMW' },
           { icon: 'github', link: 'https://github.com/es-js/esjs' },
         ],
 

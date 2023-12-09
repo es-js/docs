@@ -10,7 +10,7 @@ El objeto Terminal provee funciones para interactuar con el Usuario.
 
 Escribe un mensaje en la terminal.
 
-<InlinePlayground only-playground>
+<InlinePlayground hide-console hide-preview="false">
 
 ```esjs
 importar { Terminal } desde "@es-js/terminal"

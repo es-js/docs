@@ -64,50 +64,10 @@ Navega a `http://localhost:3000` para ver el resultado.
 
 ### Instalación manual
 
-Para agregar EsJS a un proyecto existente, sigue los siguientes pasos:
+La instalación manual puede realizarse utilizando [Babel](https://babeljs.io/) o [Vite](https://vitejs.dev/). Se recomienda utilizar Vite, ya que es más rápido y fácil de configurar.
 
-1. Instala EsJS como dependencia de desarrollo:
-
-   ::: code-group
-
-   ```bash[npm]
-   npm install @es-js/vite-plugin-esjs --save-dev
-   ```
-
-   ```bash[pnpm]
-   pnpm add @es-js/vite-plugin-esjs --save-dev
-   ```
-
-   ```bash[yarn]
-   yarn add @es-js/vite-plugin-esjs --dev
-   ```
-
-   ```bash[bun]
-   bun install @es-js/vite-plugin-esjs --dev
-   ```
-
-   :::
-2. Agrega el plugin de EsJS a tu configuración de Vite:
-
-   ```js[vite.config.js]
-   import { defineConfig } from 'vite'
-   import EsJS from '@es-js/vite-plugin-esjs'
-
-   export default defineConfig({
-     plugins: [
-       EsJS()
-     ],
-     resolve: {
-       extensions: [
-         // Otras extensiones...
-         '.js',
-         '.esjs',
-       ]
-     }
-   })
-    ```
-3. Listo, ya puedes crear archivos `.esjs` e importarlos desde tu archivo `.js` principal.
+(Trabajo En Progreso).
 
 ## Tutorial Interactivo
 
-Puedes aprender EsJS de forma interactiva en [Aprender.EsJS.dev](https://aprender.esjs.dev/) (Trabajo en progreso).
+Puedes aprender EsJS de forma interactiva en [Aprender.EsJS.dev](https://aprender.esjs.dev/) (Trabajo En Progreso).

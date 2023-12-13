@@ -9,7 +9,6 @@
 ### Prerequisitos
 
 - [Node.js](https://nodejs.org/) (>= 18.0.0)
-- [Vite](https://vitejs.dev/) (>= 2.0.0)
 - Terminal para ejecutar comandos
 - Editor de código
   - Recomendado: [Visual Studio Code](https://code.visualstudio.com/) con la extensión [EsJS](https://marketplace.visualstudio.com/items?itemName=EnzoNotario.vscode-esjs)

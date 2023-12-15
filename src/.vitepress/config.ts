@@ -159,6 +159,7 @@ export default async () => {
           { text: 'Guía', link: '/guia/empezando' },
           { text: 'Ecosistema', link: '/ecosistema/' },
           { text: 'Ejemplos', link: '/ejemplos' },
+          { text: 'Tutorial', link: 'https://aprender.esjs.dev/' },
         ],
 
         sidebar: {

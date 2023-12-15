@@ -20,7 +20,9 @@ prueba("prueba de ejemplo", funcion () {
 </InlinePlayground>
 
 
-[Ver más](./prueba)
+<div class="pt-8 flex justify-center">
+<a class="action primary-soft" href="/ecosistema/prueba">Ver más</a>
+</div>
 
 ## Terminal
 
@@ -38,7 +40,9 @@ Terminal.escribir(`Hola ${nombre}`)
 
 </InlinePlayground>
 
-[Ver más](./terminal)
+<div class="pt-8 flex justify-center">
+<a class="action primary-soft" href="/ecosistema/terminal">Ver más</a>
+</div>
 
 ## Tiza
 
@@ -61,4 +65,6 @@ Terminal.escribir(
 
 </InlinePlayground>
 
-[Ver más](./tiza)
+<div class="pt-8 flex justify-center">
+<a class="action primary-soft" href="/ecosistema/tiza">Ver más</a>
+</div>

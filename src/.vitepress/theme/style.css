@@ -58,6 +58,7 @@
     text-center font-bold
     dark:bg-gray-700 dark:hover:bg-gray-600
     rounded-3xl;
+    text-decoration: none !important;
 }
 
 /** Primary button */

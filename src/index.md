@@ -7,7 +7,10 @@ sidebar: false
 
 <script setup>
 import Home from '@theme/components/Home.vue';
-import SectionCodeExample from '@theme/components/SectionCodeExample.vue';
+import Feature from '@theme/components/index/Feature.vue';
+import Playground from '@theme/components/index/Playground.vue';
+import Learn from '@theme/components/index/Learn.vue';
+import Quickstart from '@theme/components/index/Quickstart.vue';
 </script>
 
 <Home class="relative" />
@@ -16,27 +19,27 @@ import SectionCodeExample from '@theme/components/SectionCodeExample.vue';
 
 <div class="w-full h-20"></div>
 
-<SectionCodeExample title="JavaScript con sintaxis en Español" description="Escribe código en Español y ejecútalo en JavaScript." hide-console="false" hide-preview="true" browser-window-url="/fibonacci.esjs">
+<Feature title="JavaScript con sintaxis en Español" description="Escribe código en Español y ejecútalo en JavaScript" hide-console="false" hide-preview="true" browser-window-url="/fibonacci.esjs">
 
 <!--@include: ./public/codigos/fibonacci.md -->
 
-</SectionCodeExample>
+</Feature>
 
 <div class="w-full h-20"></div>
 
-<SectionCodeExample title="Modo Terminal" description="Ejecuta código en una interfaz sencilla." hide-console="true" hide-preview="false" play-height="10rem" browser-window-url="/terminal.esjs">
+<Feature title="Modo Terminal" description="Ejecuta código en una interfaz sencilla" hide-console="true" hide-preview="false" play-height="10rem" browser-window-url="/terminal.esjs">
 
 <!--@include: ./public/codigos/terminal.md -->
 
-</SectionCodeExample>
+</Feature>
 
 <div class="w-full h-20"></div>
 
-<SectionCodeExample title="Aprovecha la potencia de JavaScript" description="EsJS está basado en JavaScript, por lo que puedes utilizar todas las librerías y frameworks que ya conoces." hide-console="true" hide-preview="false" play-height="30rem" browser-window-url="/calculadora.esjs">
+<Feature title="Aprovecha la potencia de JavaScript" description="EsJS está basado en JavaScript, por lo que puedes utilizar todas las librerías y frameworks que ya conoces" hide-console="true" hide-preview="false" play-height="30rem" browser-window-url="/calculadora.esjs">
 
 <!--@include: ./public/codigos/calculadora.md -->
 
-</SectionCodeExample>
+</Feature>
 
 <div class="w-full h-20"></div>
 
@@ -55,10 +58,14 @@ import SectionCodeExample from '@theme/components/SectionCodeExample.vue';
 
 <div class="w-full h-20"></div>
 
-<h1 class="my-3 text-4xl font-bold text-center">Pruébalo ahora en EsJS Editor</h1>
+<Playground />
 
-<div class="flex flex-row justify-center">
-<a href="https://editor.esjs.dev" target="_blank" class="action primary">Abrir EsJS Editor</a>
-</div>
+<div class="w-full h-20"></div>
+
+<Learn />
+
+<div class="w-full h-20"></div>
+
+<Quickstart />
 
 </div>

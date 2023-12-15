@@ -1,3 +1,5 @@
+const { iconsPlugin, getIconCollections } = require('@egoist/tailwindcss-icons')
+
 module.exports = {
   darkMode: 'class',
   content: [
@@ -1003,5 +1005,8 @@ module.exports = {
     },
   },
   plugins: [
+    iconsPlugin({
+      collections: getIconCollections(['mdi']),
+    }),
   ],
 }

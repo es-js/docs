@@ -25,7 +25,10 @@
               >
                 Empezar con EsJS
               </a>
-              <a class="action" href="https://github.com/es-js/esjs" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+              <a class="action secondary space-x-2" href="https://aprender.esjs.dev/" target="_blank" rel="noopener noreferrer">
+                <span>Tutorial Interactivo</span>
+                <span class="i-mdi-open-in-new" />
+              </a>
             </div>
           </div>
 

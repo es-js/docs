@@ -319,8 +319,8 @@ consola.escribir('37' + 7); // "377"
 
 En el caso que un valor representando un número está en memoria como texto (cadena), hay métodos para la conversión:
 
--   [`Numero.aEntero()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/parseInt): Solo devuelve números enteros, por lo que su uso se reduce para decimales.
--   [`Numero.aDecimal()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/parseFloat): Devuelve números decimales.
+-   [`Numero.interpretarEntero()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/parseInt): Solo devuelve números enteros, por lo que su uso se reduce para decimales.
+-   [`Numero.interpretarDecimal()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/parseFloat): Devuelve números decimales.
 
 #### Ejemplo
 
@@ -345,7 +345,7 @@ Para este caso, es necesario convertir el contenido de la variable `x` de `Caden
 ```esjs
 var x = '2000'; // x es del tipo "Cadena"
 
-var xConvertido = Numero.aEntero(x); // xConvetido es del tipo "Número"
+var xConvertido = Numero.interpretarEntero(x); // xConvetido es del tipo "Número"
 
 consola.escribir(xConvertido + 23);
 ```

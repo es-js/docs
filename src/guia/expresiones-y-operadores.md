@@ -328,8 +328,8 @@ Para métodos y funciones, el operador `tipoDe` devuelve los siguientes resultad
 <InlinePlayground>
 
 ```esjs
-consola.escribir(tipoDe Numero.aEntero); // devuelve "function"
-consola.escribir(tipoDe aEntero);    // devuelve "function"
+consola.escribir(tipoDe Numero.interpretarEntero); // devuelve "function"
+consola.escribir(tipoDe interpretarEntero);    // devuelve "function"
 consola.escribir(tipoDe eval);        // devuelve "function"
 ```
 

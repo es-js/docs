@@ -1,10 +1,10 @@
 [
   {
-    "name": "Ta Te Ti (Tic Tac Toe)",
-    "link": "https://tateti-esvue.vercel.app/",
-    "repository": "https://github.com/enzonotario/tateti-esvue",
-    "description": "Juego ecrito en EsVue + EsJS",
-    "tags": ["esjs", "esvue"]
+    "name": "DolarApi.com",
+    "link": "https://dolarapi.com/",
+    "repository": "https://github.com/enzonotario/esjs-dolar-api",
+    "description": "API de cotizaciones del Dólar en Argentina",
+    "tags": ["esjs", "servidor"]
   },
   {
     "name": "Dólar Hoy Argentina",
@@ -14,10 +14,10 @@
     "tags": ["esjs", "esvue"]
   },
   {
-    "name": "Dólar API Argentina",
-    "link": "https://dolarapi.com/",
-    "repository": "https://github.com/enzonotario/esjs-dolar-api",
-    "description": "API de cotizaciones del Dólar en Argentina",
-    "tags": ["esjs", "servidor"]
+    "name": "Ta Te Ti (Tic Tac Toe)",
+    "link": "https://tateti-esvue.vercel.app/",
+    "repository": "https://github.com/enzonotario/tateti-esvue",
+    "description": "Juego ecrito en EsVue + EsJS",
+    "tags": ["esjs", "esvue"]
   }
 ]

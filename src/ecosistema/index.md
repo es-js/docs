@@ -4,7 +4,7 @@ El lenguaje EsJS está compuesto por un conjunto de librerías que se pueden uti
 
 ## Prueba
 
-Prueba es una librería que permite escribir pruebas unitarias que se ejecutan en un navegador web.
+[`@es-js/prueba`](https://npmjs.com/package/@es-js/prueba) es una librería que permite escribir pruebas unitarias que se ejecutan en un navegador web.
 
 <InlinePlayground only-playground>
 
@@ -26,7 +26,7 @@ prueba("prueba de ejemplo", funcion () {
 
 ## Terminal
 
-La Terminal es un componente que permite interactuar con el Usuario a través de la línea de comandos en un navegador web.
+[`@es-js/terminal`](https://npmjs.com/package/@es-js/terminal) es un componente que permite interactuar con el Usuario a través de la línea de comandos en un navegador web.
 
 <InlinePlayground only-playground hide-console hide-preview="false">
 
@@ -46,7 +46,7 @@ Terminal.escribir(`Hola ${nombre}`)
 
 ## Tiza
 
-Tiza es una librería que permite escribir mensajes en la Terminal con colores y estilos.
+[`@es-js/tiza`](https://npmjs.com/package/@es-js/tiza) es una librería que permite escribir mensajes en la Terminal con colores y estilos.
 
 <InlinePlayground only-playground hide-console hide-preview="false">
 

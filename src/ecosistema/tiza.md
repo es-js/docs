@@ -1,6 +1,6 @@
 # Tiza
 
-El paquete `@es-js/tiza` provee funciones para formatear texto en la terminal. Las distintas funciones se pueden combinar para darle formato y color a un texto.
+El paquete [`@es-js/tiza`](https://npmjs.com/package/@es-js/tiza) provee funciones para formatear texto en la terminal. Las distintas funciones se pueden combinar para darle formato y color a un texto.
 
 ## Funciones de formateo
 

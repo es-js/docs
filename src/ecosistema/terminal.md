@@ -1,6 +1,6 @@
 # Terminal
 
-El paquete `@es-js/terminal` provee un componente de línea de comandos que permite interactuar con el Usuario.
+El paquete [`@es-js/terminal`](https://npmjs.com/package/@es-js/terminal) provee un componente de línea de comandos que permite interactuar con el Usuario.
 
 ## Funciones
 

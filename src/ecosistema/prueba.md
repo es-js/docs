@@ -1,6 +1,6 @@
 # Prueba
 
-El paquete `@es-js/prueba` provee funciones para realizar pruebas unitarias.
+El paquete [`@es-js/prueba`](https://npmjs.com/package/@es-js/prueba) provee funciones para realizar pruebas unitarias.
 
 ## Funciones de prueba
 

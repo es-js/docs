@@ -173,9 +173,13 @@ export default async () => {
             {
               text: 'Ecosistema',
               items: [
-                { text: 'Prueba', link: '/ecosistema/prueba' },
-                { text: 'Terminal', link: '/ecosistema/terminal' },
-                { text: 'Tiza', link: '/ecosistema/tiza' },
+                {
+                  items: [
+                    { text: 'Prueba', link: '/ecosistema/prueba' },
+                    { text: 'Terminal', link: '/ecosistema/terminal' },
+                    { text: 'Tiza', link: '/ecosistema/tiza' },
+                  ],
+                },
               ],
             },
           ],

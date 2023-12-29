@@ -20,19 +20,19 @@ La forma más fácil de crear un proyecto EsJS es utilizando el siguiente comand
 ::: code-group
 
 ```bash[npm]
-npm create esjs
+npm create esjs@latest
 ```
 
 ```bash[pnpm]
-pnpm create esjs
+pnpm create esjs@latest
 ```
 
 ```bash[yarn]
-yarn create esjs
+yarn create esjs@latest
 ```
 
 ```bash[bun]
-bun create esjs
+bun create esjs@latest
 ```
 
 :::

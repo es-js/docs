@@ -8,7 +8,14 @@
         EsJS Editor es un editor de código en línea para EsJS
       </h3>
       <section class="w-full flex flex-col justify-center items-center gap-6 my-6 h-[33rem]">
-        <iframe src="https://editor.esjs.dev?embed=true" width="100%" height="100%" loading="lazy" class="rounded border border-gray-300 dark:border-gray-700" />
+        <EsIframe
+          src="https://editor.esjs.dev?embed=true"
+          width="100%"
+          height="100%"
+          loading="lazy"
+          title="EsJS Editor"
+          class="rounded border border-gray-300 dark:border-gray-700"
+        />
         <a
           href="https://editor.esjs.dev"
           target="_blank"

@@ -11,6 +11,7 @@ import Feature from '@theme/components/index/Feature.vue';
 import Playground from '@theme/components/index/Playground.vue';
 import Learn from '@theme/components/index/Learn.vue';
 import Quickstart from '@theme/components/index/Quickstart.vue';
+import Chat from '@theme/components/index/Chat.vue';
 </script>
 
 <Home class="relative" />
@@ -43,18 +44,7 @@ import Quickstart from '@theme/components/index/Quickstart.vue';
 
 <div class="w-full h-20"></div>
 
-<h1 class="my-3 text-4xl font-bold text-center">¿Tienes dudas?</h1>
-
-<p class="text-center">Chatea con un asistente virtual en la siguiente aplicación creada con EsJS en modo Terminal.</p>
-
-<ClientOnly>
-    <iframe
-        src="https://esjs-mendable-app.vercel.app/"
-        frameborder="0"
-        title="Asistente virtual EsJS"
-        class="w-full h-[80vh] border-0 rounded-[8px] bg-transparent"
-    />
-</ClientOnly>
+<Chat />
 
 <div class="w-full h-20"></div>
 

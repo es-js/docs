@@ -43,8 +43,6 @@
 | global      | var         |
 | var         | let         |
 | porDefecto  | default     |
-| obtener     | get         |
-| establecer  | set         |
 | funcion     | function    |
 
 ## Constantes del lenguaje (Language Constants)
@@ -58,6 +56,7 @@
 | Infinito       | Infinity   |
 | NuN            | NaN        |
 | ambienteGlobal | globalThis |
+| esNuN          | isNaN      |
 
 ## Funciones de soporte (Support Functions)
 
@@ -129,7 +128,7 @@
 | repetir                    | repeat            |
 | reemplazar                 | replace           |
 | reemplazarTodo             | replaceAll        |
-| buscar                     | search            |
+| buscarRegex                | search            |
 | recortar                   | slice             |
 | dividir                    | split             |
 | comienzaCon                | startsWith        |

@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^0.0.20
     version: 0.0.20(@iconify/vue@4.1.1)(vue@3.3.4)
   '@es-js/language-tools':
-    specifier: ^0.0.15
-    version: 0.0.15
+    specifier: ^0.0.17
+    version: 0.0.17
   '@iconify-json/mdi':
     specifier: ^1.1.63
     version: 1.1.63
@@ -767,8 +767,8 @@ packages:
       vue: 3.3.4
     dev: true
 
-  /@es-js/language-tools@0.0.15:
-    resolution: {integrity: sha512-Kix++gZaH2sPqnXyLu+TQAbpdjA+i7XsU5b3HFB/4JI5KcHlToYpakxdDMdsrmw7QTj1oUGIyv6u4/bGqo7lZA==}
+  /@es-js/language-tools@0.0.17:
+    resolution: {integrity: sha512-d0/IoUDyFjd2NtTTvnRttClB+8uXyfGyNktI6V/NeJQgmHxfWhRYRn0CR4bOXk1Y4HD7zcNjFyIWdPqLSXjW4A==}
     dev: true
 
   /@esbuild/android-arm64@0.18.20:

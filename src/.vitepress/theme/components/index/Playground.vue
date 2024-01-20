@@ -1,3 +1,6 @@
+<script setup>
+</script>
+
 <template>
   <div>
     <header class="flex flex-col justify-center items-center gap-3 w-full">
@@ -16,14 +19,17 @@
           title="EsJS Editor"
           class="rounded border border-gray-300 dark:border-gray-700"
         />
+
         <a
           href="https://editor.esjs.dev"
           target="_blank"
           rel="noopener noreferrer"
-          class="action primary-soft space-x-2"
+          class="text-center block mt-1"
         >
-          <span>Abrir EsJS Editor</span>
-          <span class="i-mdi-open-in-new" />
+          <div class="action primary-soft space-x-2">
+            <span>Abrir EsJS Editor</span>
+            <span class="i-mdi-open-in-new" />
+          </div>
         </a>
       </section>
     </header>

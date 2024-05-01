@@ -1,5 +1,12 @@
 [
   {
+    "name": "ArgentinaDatos",
+    "link": "https://argentinadatos.com/",
+    "repository": "https://github.com/enzonotario/esjs-argentina-datos-api",
+    "description": "API pública de datos de Argentina",
+    "tags": ["esjs", "servidor"]
+  },
+  {
     "name": "DolarApi.com",
     "link": "https://dolarapi.com/",
     "repository": "https://github.com/enzonotario/esjs-dolar-api",

@@ -55,8 +55,8 @@ Como la mayoría de las expresiones, asignaciones como `x = y` tienen un valor d
 <InlinePlayground>
 
 ```esjs
-var y = 0;
-var x = 1;
+mut y = 0;
+mut x = 1;
 
 const z = (x = y); // O de forma equivalente: const z = x = y;
 
@@ -84,12 +84,12 @@ Para asignaciones más complejas, la sintaxis de `asignación de desestructuraci
 <InlinePlayground>
 
 ```esjs
-var foo = ['one', 'two', 'three'];
+mut foo = ['one', 'two', 'three'];
 
 // sin desestructurar
-var uno = foo[0];
-var dos = foo[1];
-var tres = foo[2];
+mut uno = foo[0];
+mut dos = foo[1];
+mut tres = foo[2];
 
 // con desestructuración
 [uno, dos, tres] = foo;
@@ -211,10 +211,10 @@ Por ejemplo, si `a` es un arreglo bidimensional con 10 elementos en un lado, el 
 <InlinePlayground>
 
 ```esjs
-var x = [0,1,2,3,4,5,6,7,8,9]
-var a = [x, x, x, x, x];
+mut x = [0,1,2,3,4,5,6,7,8,9]
+mut a = [x, x, x, x, x];
 
-para (var i = 0, j = 9; i <= j; i++, j--) {
+para (mut i = 0, j = 9; i <= j; i++, j--) {
   consola.escribir('a[' + i + '][' + j + ']= ' + a[i][j]);
 }
 ```
@@ -244,8 +244,8 @@ Si el operador `eliminar` tiene éxito, elimina la propiedad del objeto. Intenta
 
 ```esjs
 x = 42; // implícitamente crea window.x
-var y = 43;
-var myobj = {h: 4}; // crea un objeto con la propiedad h
+mut y = 43;
+mut myobj = {h: 4}; // crea un objeto con la propiedad h
 
 eliminar x;       // devuelve verdadero (se puede eliminar si se crea implícitamente)
 eliminar y;       // devuelve falso (no se puede borrar si se declara con var)
@@ -273,11 +273,11 @@ Supón que defines las siguientes variables:
 <InlinePlayground>
 
 ```esjs
-var myFun = crear Function('5 + 2');
-var shape = 'round';
-var size = 1;
-var foo = ['Apple', 'Mango', 'Orange'];
-var today = crear Fecha();
+mut myFun = crear Function('5 + 2');
+mut shape = 'round';
+mut size = 1;
+mut foo = ['Apple', 'Mango', 'Orange'];
+mut today = crear Fecha();
 
 consola.escribir(tipoDe myFun);       // devuelve "function"
 consola.escribir(tipoDe shape);       // devuelve "string"
@@ -378,7 +378,7 @@ Los siguientes ejemplos muestran algunos usos del operador `en`.
 
 ```esjs
 // Arreglos
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+mut trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 0 in trees;        // devuelve verdadero
 3 in trees;        // devuelve verdadero
 6 in trees;        // devuelve falso
@@ -388,11 +388,11 @@ var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 
 // objetos integrados
 'PI' in Math;          // devuelve verdadero
-var myString = crear Cadena('coral');
+mut myString = crear Cadena('coral');
 'length' in myString;  // devuelve verdadero
 
 // Objetos personalizados
-var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
+mut mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 'make' in mycar;  // devuelve verdadero
 'model' in mycar; // devuelve verdadero
 ```
@@ -412,7 +412,7 @@ Utiliza `instanciaDe` cuando necesites confirmar el tipo de un objeto en tiempo 
 Por ejemplo, el siguiente código usa `instanciaDe` para determinar si `elDia` es un objeto `Date`. Debido a que `elDia` es un objeto `Date`, las instrucciones de la expresión `if` se ejecutan.
 
 ```esjs
-var elDia = crear Fecha(1995, 12, 17);
+mut elDia = crear Fecha(1995, 12, 17);
 si (elDia instanciaDe Fecha) {
   // instrucciones a ejecutar
 }
@@ -497,9 +497,9 @@ Puedes llamar a `validar` en el controlador de eventos `onChange` de cada elemen
 El operador de agrupación `()` controla la precedencia de la evaluación en las expresiones. Por ejemplo, puedes redefinir la multiplicación y la división primero, luego la suma y la resta para evaluar la suma primero.
 
 ```esjs
-var a = 1;
-var b = 2;
-var c = 3;
+mut a = 1;
+mut b = 2;
+mut c = 3;
 
 // precedencia predeterminada
 a + b * c     // 7
@@ -523,7 +523,7 @@ Los valores de la izquierda son el destino de una asignación.
 Puedes utilizar el `operador crear` para crear una instancia de un tipo de objeto definido por el usuario o de uno de los tipos de objeto integrados. Utiliza `crear` de la siguiente manera:
 
 ```esjs
-var nombreObjeto = crear objectType([param1, param2, ..., paramN]);
+mut nombreObjeto = crear objectType([param1, param2, ..., paramN]);
 ```
 
 #### `super`

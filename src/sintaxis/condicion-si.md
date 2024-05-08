@@ -23,7 +23,7 @@ si (condicion) {
 <InlinePlayground>
 
 ```esjs
-var edad = 20;
+mut edad = 20;
 
 si (edad >= 18) {
     consola.escribir('Mayor de edad');

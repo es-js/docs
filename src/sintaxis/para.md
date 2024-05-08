@@ -15,7 +15,7 @@ Comienza ejecutando la expresión de inicialización. Luego, evalúa la condici�
 <InlinePlayground>
 
 ```esjs
-para (var i = 0; i < 5; i = i + 1) {
+para (mut i = 0; i < 5; i = i + 1) {
     consola.escribir(i);
 }
 

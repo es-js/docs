@@ -27,7 +27,7 @@ Terminal.escribir('Hola mundo!')
 En EsJS es posible exportar variables, constantes y funciones utilizando la palabra clave `exportar`:
 
 ```esjs
-exportar var x = 1;
+exportar mut x = 1;
 
 exportar const x = 2;
 
@@ -39,7 +39,7 @@ exportar funcion miFuncion() {
 ### Ejemplo
 
 ```esjs
-exportar var x = 1;
+exportar mut x = 1;
 
 exportar const y = 2;
 

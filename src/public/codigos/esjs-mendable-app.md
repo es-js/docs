@@ -46,7 +46,7 @@ asincrono funcion iniciar() {
 
   mensajeInicial()
 
-  var respuesta = esperar preguntarUsuario()
+  mut respuesta = esperar preguntarUsuario()
   mientras (respuesta.aMinusculas() !== "hola") {
     const mensajeError =
       "No entendí. Por favor, escribe <strong>hola</strong> para comenzar una conversación."

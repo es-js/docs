@@ -13,7 +13,7 @@ hacer {
 <InlinePlayground>
 
 ```esjs
-var i = 0;
+mut i = 0;
 
 hacer {
     consola.escribir(i);

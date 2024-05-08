@@ -13,31 +13,31 @@ Ejemplos de expresiones que se pueden convertir a `falso` son aquellos que se ev
 El siguiente código muestra ejemplos del operador `&&` (`AND` lógico).
 
 ```esjs
-var a1 =  true && true;     // t && t devuelve true
-var a2 =  true && falso;    // t && f devuelve falso
-var a3 = falso && true;     // f && t devuelve falso
-var a4 = falso && (3 == 4); // f && f devuelve falso
-var a5 = 'Cat' && 'Dog';    // t && t devuelve Dog
-var a6 = falso && 'Cat';    // f && t devuelve falso
-var a7 = 'Cat' && falso;    // t && f devuelve falso
+mut a1 =  true && true;     // t && t devuelve true
+mut a2 =  true && falso;    // t && f devuelve falso
+mut a3 = falso && true;     // f && t devuelve falso
+mut a4 = falso && (3 == 4); // f && f devuelve falso
+mut a5 = 'Cat' && 'Dog';    // t && t devuelve Dog
+mut a6 = falso && 'Cat';    // f && t devuelve falso
+mut a7 = 'Cat' && falso;    // t && f devuelve falso
 ```
 
 El siguiente código muestra ejemplos del operador || (`OR` lógico).
 
 ```esjs
-var o1 =  true || true;     // t || t devuelve true
-var o2 = falso || true;     // f || t devuelve true
-var o3 =  true || falso;    // t || f devuelve true
-var o4 = falso || (3 == 4); // f || f devuelve falso
-var o5 = 'Cat' || 'Dog';    // t || t devuelve Cat
-var o6 = falso || 'Cat';    // f || t devuelve Cat
-var o7 = 'Cat' || falso;    // t || f devuelve Cat
+mut o1 =  true || true;     // t || t devuelve true
+mut o2 = falso || true;     // f || t devuelve true
+mut o3 =  true || falso;    // t || f devuelve true
+mut o4 = falso || (3 == 4); // f || f devuelve falso
+mut o5 = 'Cat' || 'Dog';    // t || t devuelve Cat
+mut o6 = falso || 'Cat';    // f || t devuelve Cat
+mut o7 = 'Cat' || falso;    // t || f devuelve Cat
 ```
 
 El siguiente código muestra ejemplos de el operador ! (`NOT` lógico).
 
 ```esjs
-var n1 = !true;  // !t devuelve falso
-var n2 = !falso; // !f devuelve true
-var n3 = !'Cat'; // !t devuelve falso
+mut n1 = !true;  // !t devuelve falso
+mut n2 = !falso; // !f devuelve true
+mut n3 = !'Cat'; // !t devuelve falso
 ```

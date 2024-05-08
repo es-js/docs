@@ -1,13 +1,13 @@
 # Variables
 
-Una variable es un espacio de memoria que almacena un valor. En EsJS, las variables se declaran explícitamente con la palabra clave `var` (variables locales) o `global` (variables globales).
+Una variable es un espacio de memoria que almacena un valor. En EsJS, las variables se declaran explícitamente con la palabra clave `mut` (variables locales) o `var` (variables globales).
 
-## Variables locales `var`
+## Variables locales `mut`
 
-Las variables locales son variables que solo pueden ser accedidas desde el bloque de código donde fueron declaradas. Se declaran con la palabra clave `var`:
+Las variables locales son variables que solo pueden ser accedidas desde el bloque de código donde fueron declaradas. Se declaran con la palabra clave `mut`:
 
 ```esjs
-    var x = 1
+    mut x = 1
 ```
 
 ### Ejemplo
@@ -16,7 +16,7 @@ Las variables locales son variables que solo pueden ser accedidas desde el bloqu
 
 ```esjs
     si (verdadero) {
-        var x = 1
+        mut x = 1
         
         consola.escribir(x) // Muestra `1`
     }
@@ -31,12 +31,12 @@ Las variables locales son variables que solo pueden ser accedidas desde el bloqu
 
 </InlinePlayground>
 
-## Variables globales `global`
+## Variables globales `var`
 
-Las variables globales son variables que pueden ser accedidas desde cualquier parte del programa. Se declaran con la palabra clave `global`:
+Las variables globales son variables que pueden ser accedidas desde cualquier parte del programa. Se declaran con la palabra clave `var`:
 
 ```esjs
-    global x = 1
+    var x = 1
 ```
 
 ### Ejemplo
@@ -45,7 +45,7 @@ Las variables globales son variables que pueden ser accedidas desde cualquier pa
 
 ```esjs
     si (verdadero) {
-        global x = 1
+        var x = 1
         
         consola.escribir(x) // Muestra `1`
     }

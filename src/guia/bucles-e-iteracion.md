@@ -7,7 +7,7 @@ Puedes pensar en un bucle como una versión computarizada del juego en la que le
 <InlinePlayground>
 
 ```esjs
-para (var paso = 0; paso < 5; paso++) {
+para (mut paso = 0; paso < 5; paso++) {
   // Se ejecuta 5 veces, con valores del paso 0 al 4.
   consola.escribir('Iteración N°: ' + paso + ' - Camina un paso hacia el este');
 }
@@ -57,7 +57,7 @@ El siguiente ejemplo muestra los 10 primeros números del Sistema Decimal.
 <InlinePlayground>
 
 ```esjs
-var i;
+mut i;
 para (i = 0; i < 10; i++) {
   consola.escribir(i);
 }
@@ -88,7 +88,7 @@ Similar al ejemplo anterior, pero utilizando el bucle `hacer`.
 <InlinePlayground>
 
 ```esjs
-var i = 0; 
+mut i = 0; 
 
 hacer { 
   consola.escribir(i); 
@@ -119,7 +119,7 @@ Similar al ejemplo anterior, pero utilizando el bucle `mientras`.
 <InlinePlayground>
 
 ```esjs
-var n = 0;
+mut n = 0;
 mientras (n < 10) {
   consola.escribir(n);
   n++;
@@ -136,7 +136,7 @@ Evita los bucles infinitos. Asegúrate de que la condición en un bucle eventual
 
 ```esjs
 // ¡Los bucles infinitos son malos!
-var i = 0;
+mut i = 0;
 mientras (i > 0) {
   consola.escribir('Iteración N°: ' + i);
   i++;
@@ -162,7 +162,7 @@ En este ejemplo, la etiqueta `bucleEtiquetado` identifica un bucle `mientras`.
 <InlinePlayground>
 
 ```esjs
-var i = 0;
+mut i = 0;
 bucleEtiquetado: mientras (i < 10) { 
     consola.escribir(i);
     i++;
@@ -195,7 +195,7 @@ El siguiente ejemplo pretende mostrar los primeros 10 números del Sistema Decim
 <InlinePlayground>
 
 ```esjs
-para (var i = 0; i < 10; i++) {
+para (mut i = 0; i < 10; i++) {
   si (i > 5) {
     romper;
   }
@@ -215,8 +215,8 @@ Haciendo uso declaraciones etiquetadas, el siguiente ejemplo cómo se puede `rom
 <InlinePlayground>
 
 ```esjs
-var x = 0;
-var z = 0;
+mut x = 0;
+mut z = 0;
 bucleCancelable: mientras (verdadero) {
   consola.escribir('Bucles externos: ' + x);
   x += 1;
@@ -256,8 +256,8 @@ El siguiente ejemplo muestra un bucle `mientras` con una instrucción `continuar
 <InlinePlayground only-playground>
 
 ```esjs
-var i = 0;
-var n = 0;
+mut i = 0;
+mut n = 0;
 mientras (i < 5) {
   i++;
   si (i === 3) {
@@ -280,8 +280,8 @@ Si `continuar` tuviera una etiqueta de `bucleI`, el programa continuaría en la 
 <InlinePlayground>
 
 ```esjs
-var i = 0;
-var j = 10;
+mut i = 0;
+mut j = 10;
 bucleI: mientras (i < 4) { 
     consola.depurar('bucleI: ' + i);
     i += 1;
@@ -319,8 +319,8 @@ La siguiente función toma como argumento un objeto y el nombre del objeto. Lueg
 
 ```esjs
 funcion mostrarPropiedades(objeto, objeto_nombre) {
-  var resultado = '';
-  para (var i en objeto) {
+  mut resultado = '';
+  para (mut i en objeto) {
     resultado += objeto_nombre + '.' + i + ' = ' + objeto[i] + '\n';
   }
   resultado += '---';
@@ -361,13 +361,13 @@ El siguiente ejemplo muestra la diferencia entre un bucle `para...de` y un bucle
 const lista = [3, 5, 7];
 lista.foo = 'hola';
 
-para (var i en lista) {
+para (mut i en lista) {
    consola.escribir(i); // muestra "0", "1", "2", "foo"
 }
 
 consola.escribir('---');
 
-para (var i de lista) {
+para (mut i de lista) {
    consola.escribir(i); // muestra 3, 5, 7
 }
 ```

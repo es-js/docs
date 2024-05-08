@@ -65,7 +65,7 @@ funcion miFuncion() {
     retornar 1;
 }
 
-var x = miFuncion();
+mut x = miFuncion();
 ```
 
 </InlinePlayground>

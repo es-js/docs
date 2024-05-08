@@ -11,8 +11,8 @@ Por ejemplo:
 <InlinePlayground>
 
 ```esjs
-var edad = 20;
-var estado = (edad >= 18) ? 'Mayor de edad' : 'Menor de edad';
+mut edad = 20;
+mut estado = (edad >= 18) ? 'Mayor de edad' : 'Menor de edad';
 
 consola.escribir(estado);
 ```

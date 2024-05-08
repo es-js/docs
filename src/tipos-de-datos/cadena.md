@@ -3,9 +3,9 @@
 Una cadena es una secuencia de caracteres. En EsJS, las cadenas se declaran utilizando comillas simples o dobles:
 
 ```esjs
-var x = 'Hola mundo';
+mut x = 'Hola mundo';
 
-var y = "Hola mundo";
+mut y = "Hola mundo";
 ```
 
 ## Objeto Cadena (String object)

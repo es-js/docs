@@ -13,7 +13,7 @@ mientras (condicion) {
 <InlinePlayground>
 
 ```esjs
-var i = 0;
+mut i = 0;
 
 mientras (i < 5) {
     consola.escribir(i);

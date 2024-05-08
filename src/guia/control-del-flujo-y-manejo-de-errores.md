@@ -24,7 +24,7 @@ El siguiente ejemplo comienza declarando una variable `x` con el valor `0`. Lueg
 <InlinePlayground>
 
 ```esjs
-var x = 0;
+mut x = 0;
 mientras (x < 10) {
   consola.escribir(x);
   x = x + 1; // Aumenta el valor de "x" para la siguiente iteración
@@ -90,7 +90,7 @@ En el caso de múltiples condiciones, solo se ejecutará la primera condición l
 >
 > ```esjs
 > // Propenso a ser mal interpretado como "x == 1"
-> var x = 0;
+> mut x = 0;
 > si (x = 1) {
 >   consola.escribir('X es igual a: ' + x);
 > }
@@ -104,7 +104,7 @@ En el caso de múltiples condiciones, solo se ejecutará la primera condición l
 >
 > ```esjs
 > // Propenso a ser mal interpretado como "x == 1"
-> var x = 0;
+> mut x = 0;
 > si ((x = 1)) {
 >   consola.escribir('X es igual a: ' + x);
 > }
@@ -117,7 +117,7 @@ En el caso de múltiples condiciones, solo se ejecutará la primera condición l
 > <InlinePlayground>
 >
 > ```esjs
-> var x = 0;
+> mut x = 0;
 > x = 1
 > si (x === 0) {
 >   consola.escribir('Esto no se ejecuta, ya que x es igual a 1');
@@ -145,7 +145,7 @@ Todos los demás valores, incluidos todos los objetos, se evalúan como `verdade
 > <InlinePlayground>
 > 
 > ```esjs
-> var b = crear Booleano(falso);
+> mut b = crear Booleano(falso);
 > si (b) { // esta condición se evalúa como verdadero
 >   consola.escribir('Primera declaración');
 > }
@@ -225,7 +225,7 @@ En el siguiente ejemplo, si `tipoDeFruta` se evalúa como '`Bananas`', el progra
 <InlinePlayground>
 
 ```esjs
-var tipoDeFruta = 'Mangos';
+mut tipoDeFruta = 'Mangos';
 
 elegir (tipoDeFruta) {
   caso "Naranjas":
@@ -330,7 +330,7 @@ El siguiente ejemplo usa una instrucción `intentar...lanzar`. El ejemplo llama 
 
 ```esjs
 
-var mesNombre;
+mut mesNombre;
 const mesNumero = 3;
 
 funcion obtenerNombreMes(mes) {

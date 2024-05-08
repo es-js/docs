@@ -3,11 +3,11 @@
 El tipo de dato `Numero` representa un valor numérico. Los números pueden ser enteros o decimales; positivos o negativos.
 
 ```esjs
-var x = 1;
+mut x = 1;
 
-var y = 1.5;
+mut y = 1.5;
 
-var z = -1;
+mut z = -1;
 ```
 
 ## Objeto `Numero` (Number)

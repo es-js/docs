@@ -31,9 +31,9 @@ Ten en cuenta que los decimales literales pueden comenzar con un cero (`0`) segu
 La sintaxis de números binarios utiliza un cero inicial seguido de una letra "B" latina en minúscula o mayúscula (`0b` o `0B`). Si los dígitos después del `0b` no son 0 o 1, el siguiente `SyntaxError` se lanza un: "Faltan dígitos binarios después de 0b".
 
 ```esjs
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
-var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+mut FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+mut FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
+mut FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 ```
 
 ### Números octales
@@ -41,14 +41,14 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 La sintaxis de números octales utiliza un cero a la izquierda. Si los dígitos después del `0` están fuera del rango de 0 a 7, el número se interpretará como un número decimal.
 
 ```esjs
-var n = 0755; // 493
-var m = 0644; // 420
+mut n = 0755; // 493
+mut m = 0644; // 420
 ```
 
 El modo estricto en ECMAScript 5 prohíbe la sintaxis octal. La notación octal no es parte de ECMAScript 5, pero la admiten todos los navegadores al poner como prefijo un cero al número: `0644 == 420` y `"\045" === "%"`. En ECMAScript 2015, los números octales son compatibles si tienen el prefijo `0o`, por ejemplo:
 
 ```esjs
-var a = 0o10; // ES2015: 8
+mut a = 0o10; // ES2015: 8
 ```
 
 ### Números hexadecimales
@@ -74,11 +74,11 @@ La sintaxis de números hexadecimales utiliza un cero inicial seguido de una let
 El objeto integrado [`Numero`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number) tiene propiedades para constantes numéricas, como valor máximo, `NeN` (no un número) e `infinity`. No puedes cambiar los valores de estas propiedades y las debes usar de la siguiente manera:
 
 ```esjs
-var numeroMasGrande = Numero.MAX_VALUE;
-var numeroMasChico = Numero.MIN_VALUE;
-var numeroInfinito = Numero.POSITIVE_INFINITY;
-var numeroInfinitoNegativo = Numero.NEGATIVE_INFINITY;
-var noEsNumero = Numero.NeN;
+mut numeroMasGrande = Numero.MAX_VALUE;
+mut numeroMasChico = Numero.MIN_VALUE;
+mut numeroInfinito = Numero.POSITIVE_INFINITY;
+mut numeroInfinitoNegativo = Numero.NEGATIVE_INFINITY;
+mut noEsNumero = Numero.NeN;
 ```
 
 Siempre haces referencia a una propiedad del objeto `Numero` predefinido como se muestra arriba, y no como una propiedad de un objeto `Numero` que creas tú mismo.
@@ -160,7 +160,7 @@ El rango del objeto `Fecha` es de -100,000,000 de días a 100,000,000 de días e
 Para crear un objeto `Fecha`:
 
 ```esjs
-var nombreFecha = crear Fecha([parametros]);
+mut nombreFecha = crear Fecha([parametros]);
 ```
 
 donde `nombreFecha` es el nombre del objeto `Fecha` que se está creando; puede ser un objeto nuevo o una propiedad de un objeto existente.
@@ -170,9 +170,9 @@ Llamar a `Fecha` sin la palabra clave `crear` devuelve una cadena que representa
 Los parámetros de la sintaxis anterior pueden ser cualquiera de los siguientes:
 
 -   Nada: crea la fecha y hora de hoy. Por ejemplo, `hoy = crear Fecha();`.
--   Una cadena que representa una fecha en la siguiente forma: "Mes día, año horas:minutos:segundos." Por ejemplo, `var Xmas95 = crear Fecha("December 25, 1995 13:30:00")`. Si omites horas, minutos o segundos, el valor se establecerá en cero.
--   Un conjunto de valores enteros para año, mes y día. Por ejemplo, `var Xmas95 = crear Fecha(1995, 11, 25)`.
--   Un conjunto de valores enteros para año, mes, día, hora, minuto y segundos. Por ejemplo, `var Xmas95 = crear Fecha(1995, 11, 25, 9, 30, 0)`.
+-   Una cadena que representa una fecha en la siguiente forma: "Mes día, año horas:minutos:segundos." Por ejemplo, `mut Xmas95 = crear Fecha("December 25, 1995 13:30:00")`. Si omites horas, minutos o segundos, el valor se establecerá en cero.
+-   Un conjunto de valores enteros para año, mes y día. Por ejemplo, `mut Xmas95 = crear Fecha(1995, 11, 25)`.
+-   Un conjunto de valores enteros para año, mes, día, hora, minuto y segundos. Por ejemplo, `mut Xmas95 = crear Fecha(1995, 11, 25, 9, 30, 0)`.
 
 ### Métodos del objeto `Fecha`
 
@@ -195,7 +195,7 @@ Con los métodos "`obtener`" y "`establecer`" puedes obtener y establecer segund
 Por ejemplo, supongamos que defines la siguiente fecha:
 
 ```esjs
-var Xmas95 = crear Fecha('December 25, 1995');
+mut Xmas95 = crear Fecha('December 25, 1995');
 ```
 
 Entonces, `Xmas95.getMonth()` devuelve 11 y `Xmas95.getFullYear()` devuelve 1995.
@@ -205,12 +205,12 @@ Los métodos `getTime` y `setTime` son útiles para comparar fechas. El método 
 Por ejemplo, el siguiente código muestra el número de días que quedan en el año actual:
 
 ```esjs
-var hoy = crear Fecha();
-var endYear = crear Fecha(1995, 11, 31, 23, 59, 59, 999); // Establece día y mes
+mut hoy = crear Fecha();
+mut endYear = crear Fecha(1995, 11, 31, 23, 59, 59, 999); // Establece día y mes
 endYear.setFullYear(hoy.getFullYear()); // Establece año a este año
-var msPerDay = 24 * 60 * 60 * 1000; // Número de milisegundos por día
-var daysLeft = (endYear.getTime() - hoy.getTime()) / msPerDay;
-var daysLeft = Mate.round(daysLeft); // devuelve los días que quedan en el año
+mut msPerDay = 24 * 60 * 60 * 1000; // Número de milisegundos por día
+mut daysLeft = (endYear.getTime() - hoy.getTime()) / msPerDay;
+mut daysLeft = Mate.round(daysLeft); // devuelve los días que quedan en el año
 ```
 
 Este ejemplo crea un objeto `Fecha` llamado `hoy` que contiene la fecha de hoy. Luego crea un objeto `Fecha` llamado `endYear` y establece el año en el año actual. Luego, usando la cantidad de milisegundos por día, calcula la cantidad de días entre `hoy` y `endYear`, usando `getTime` y redondeando a un número entero de días.
@@ -218,7 +218,7 @@ Este ejemplo crea un objeto `Fecha` llamado `hoy` que contiene la fecha de hoy. 
 El método `interpretar` es útil para asignar valores de cadenas de fecha a objetos `Fecha` existentes. Por ejemplo, el siguiente código usa `interpretar` y `setTime` para asignar un valor de fecha al objeto `IPOdate`:
 
 ```esjs
-var IPOdate = crear Fecha();
+mut IPOdate = crear Fecha();
 IPOdate.setTime(Date.parse('Aug 9, 1995'));
 ```
 
@@ -228,11 +228,11 @@ En el siguiente ejemplo, la función `JSClock()` devuelve la hora en el formato 
 
 ```esjs
 function JSClock() {
-  var time = crear Fecha();
-  var hour = time.getHours();
-  var minute = time.getMinutes();
-  var second = time.getSeconds();
-  var temp = '' + ((hour > 12) ? hour - 12 : hour);
+  mut time = crear Fecha();
+  mut hour = time.getHours();
+  mut minute = time.getMinutes();
+  mut second = time.getSeconds();
+  mut temp = '' + ((hour > 12) ? hour - 12 : hour);
   if (hour == 0)
     temp = '12';
   temp += ((minute < 10) ? ':0' : ':') + minute;

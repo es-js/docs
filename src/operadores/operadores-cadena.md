@@ -17,7 +17,7 @@ Por ejemplo,
 <InlinePlayground>
 
 ```esjs
-var miCadena = 'alfa';
+mut miCadena = 'alfa';
 miCadena += 'beto'; // se evalúa como "alfabeto" y asigna este valor a miCadena.
 
 consola.escribir(miCadena); // Muestra "alfabeto"

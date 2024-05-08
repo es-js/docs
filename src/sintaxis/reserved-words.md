@@ -1,7 +1,7 @@
 ## Palabras reservadas de control (Control Keywords)
 
 | EsJS        | JavaScript  |
-| ----------- | ----------- |
+|-------------| ----------- |
 | capturar    | catch       |
 | caso        | case        |
 | con         | with        |
@@ -40,8 +40,8 @@
 | asincrono   | async       |
 | clase       | class       |
 | const       | const       |
-| global      | var         |
-| var         | let         |
+| var         | var         |
+| mut         | let         |
 | porDefecto  | default     |
 | funcion     | function    |
 

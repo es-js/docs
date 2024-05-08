@@ -5,5 +5,5 @@
 > Dado que EsJS/JavaScript distinguen entre mayúsculas y minúsculas, `nulo` no es lo mismo que `Nulo`, `NULLO` o cualquier otra variante.
 
 ```esjs
-var x = nulo;
+mut x = nulo;
 ```

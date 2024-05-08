@@ -23,7 +23,7 @@ elegir (expresion) {
 <InlinePlayground>
 
 ```esjs
-var dia = 2;
+mut dia = 2;
 
 elegir (dia) {
     caso 1:

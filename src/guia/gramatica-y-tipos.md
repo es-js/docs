@@ -9,7 +9,7 @@ La sintaxis de EsJS es literalmente la de JavaScript, traducida al Español. A s
 EsJS distingue entre mayúsculas y minúsculas (es _case-sensitive_) y utiliza el conjunto de caracteres Unicode. Por ejemplo, la palabra «Año» se podría usar como el nombre de una variable.
 
 ```esjs
-var Año = "2023"
+mut Año = "2023"
 ```
 
 Pero, la variable `año` no es la misma que `Año` porque EsJS distingue entre mayúsculas y minúsculas.
@@ -42,11 +42,11 @@ Los comentarios se comportan como espacios en blanco y se descartan durante la e
 
 EsJS tiene tres tipos de declaraciones de variables.
 
-- `global`
+- `var`
 
     Declara una variable global, opcionalmente la inicia a un valor. Equivale a `var` en JavaScript.
 
-- `var`
+- `mut`
 
     Declara una variable local con ámbito de bloque, opcionalmente la inicia a un valor. Equivale a `let` en JavaScript.
 
@@ -70,20 +70,20 @@ Algunos ejemplos de nombres permitidos son `Numero_ventas`, `temporal99`, `$cré
 
 Puedes declarar una variable de dos formas:
 
--   Con la palabra clave `global`. Por ejemplo, `global x = 42`. Esta sintaxis se puede utilizar para declarar variables **locales** y **globales**, dependiendo del _contexto de ejecución_.
--   Con la palabra clave `const` o `var`. Por ejemplo, `var y = 13`. Esta sintaxis se puede utilizar para declarar una variable local con ámbito de bloque. (Ve el [Ámbito de variables](#ambito-de-variables) abajo.)
+-   Con la palabra clave `var`. Por ejemplo, `var x = 42`. Esta sintaxis se puede utilizar para declarar variables **locales** y **globales**, dependiendo del _contexto de ejecución_.
+-   Con la palabra clave `const` o `mut`. Por ejemplo, `mut y = 13`. Esta sintaxis se puede utilizar para declarar una variable local con ámbito de bloque. (Ve el [Ámbito de variables](#ambito-de-variables) abajo.)
 
 ### Evaluar variables
 
-Una variable declarada usando la instrucción `global` o `var`, sin un valor asignado especificado, tiene el valor de [`indefinido`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+Una variable declarada usando la instrucción `var` o `mut`, sin un valor asignado especificado, tiene el valor de [`indefinido`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 
 <InlinePlayground only-playground>
 
 ```esjs
-global a;
+var a;
 consola.escribir('El valor de a es ' + a); // El valor de a es indefinido
 
-var x;
+mut x;
 consola.escribir('El valor de x es ' + x); // El valor de x es indefinido
 ```
 
@@ -104,7 +104,7 @@ Puedes usar `indefinido` para determinar si una variable tiene un valor. En el s
 <InlinePlayground>
 
 ```esjs
-var entrada;
+mut entrada;
 si (entrada === indefinido) {
   consola.error('Valor indefinido');
 } sino {
@@ -119,7 +119,7 @@ El valor `indefinido` se comporta como `falso` cuando se usa en un contexto bool
 <InlinePlayground>
 
 ```esjs
-var miLista = [];
+mut miLista = [];
 si (!miLista[0]) {
   consola.error('Elemento no definido');
 }
@@ -132,7 +132,7 @@ El valor `indefinido` se convierte en `NeN` cuando se usa en contexto numérico.
 <InlinePlayground>
 
 ```esjs
-var a;
+mut a;
 consola.escribir(a + 2);  // Evalúa a NeN
 ```
 
@@ -143,7 +143,7 @@ Cuando evalúas una variable [`nulo`](https://developer.mozilla.org/es/docs/Web/
 <InlinePlayground>
 
 ```esjs
-var n = nulo;
+mut n = nulo;
 consola.escribir(n * 32); // Registrará 0 en la consola
 ```
 
@@ -159,20 +159,20 @@ Por ejemplo, el siguiente código registrará `5`, porque el ámbito de `x` es e
 
 ```esjs
 si (verdadero) {
-  global x = 5;
+  var x = 5;
 }
 consola.escribir(x);  // x es 5
 ```
 
 </InlinePlayground>
 
-Este comportamiento cambia cuando se usa la declaración `var`.
+Este comportamiento cambia cuando se usa la declaración `mut`.
 
 <InlinePlayground>
 
 ```esjs
 si (verdadero) {
-  var x = 5;
+  mut x = 5;
 }
 consola.escribir(x); // ReferenceError: x no está definida
 ```
@@ -197,7 +197,7 @@ La sintaxis de un identificador de constante es la misma que la de cualquier ide
 
 Una constante no puede cambiar el valor a través de la asignación o volver a declararla mientras se ejecuta el script. Se debe iniciar a un valor.
 
-Las reglas de ámbito para las constantes son las mismas que las de ámbito de bloque de las variables `global`.
+Las reglas de ámbito para las constantes son las mismas que las de ámbito de bloque de las variables `var`.
 
 Si bien una constante no puede cambiar su valor una vez definida, esto no ocurre con las propiedades de los objetos asignados a constantes; de manera que el siguiente programa se ejecuta sin problemas:
 
@@ -245,7 +245,7 @@ consola.escribir(MI_ARREGLO); // Muestra ['HTML','CSS','JavaScript','EsJS'];
 > ```esjs
 > funcion f() {
 >   const g = 5;
->   global g;
+>   var g;
 > }
 > ```
 >
@@ -276,7 +276,7 @@ EsJS es un lenguaje _tipado dinámicamente_. Esto significa que no tienes que es
 Así, por ejemplo, puedes definir una variable de la siguiente manera:
 
 ```esjs
-var respuesta = 42;
+mut respuesta = 42;
 ```
 
 Y luego, puedes asignarle una cadena a esa misma variable, por ejemplo:
@@ -294,8 +294,8 @@ En expresiones que involucran valores numéricos y de cadena con el operador `+`
 <InlinePlayground>
 
 ```esjs
-var x = 'La respuesta es ' + 42; // "La respuesta es 42"
-var y = 42 + ' es la respuesta'; // "42 es la respuesta"
+mut x = 'La respuesta es ' + 42; // "La respuesta es 42"
+mut y = 42 + ' es la respuesta'; // "42 es la respuesta"
 consola.escribir(x);
 consola.escribir(y);
 ```
@@ -329,7 +329,7 @@ Por ejemplo, si tenemos una variable `x` del tipo `Cadena`, y queremos sumarle u
 <InlinePlayground>
 
 ```esjs
-var x = '2000'; // x es del tipo "Cadena"
+mut x = '2000'; // x es del tipo "Cadena"
 
 // si queremos sumarle un valor a x, en realidad estamos concatenando las cadenas
 
@@ -343,9 +343,9 @@ Para este caso, es necesario convertir el contenido de la variable `x` de `Caden
 <InlinePlayground>
 
 ```esjs
-var x = '2000'; // x es del tipo "Cadena"
+mut x = '2000'; // x es del tipo "Cadena"
 
-var xConvertido = Numero.interpretarEntero(x); // xConvetido es del tipo "Número"
+mut xConvertido = Numero.interpretarEntero(x); // xConvetido es del tipo "Número"
 
 consola.escribir(xConvertido + 23);
 ```
@@ -373,7 +373,7 @@ El siguiente ejemplo crea el arreglo `cafes` con tres elementos y `longitud` de 
 <InlinePlayground>
 
 ```esjs
-var cafes = ['French Roast', 'Colombiano', 'Kona'];
+mut cafes = ['French Roast', 'Colombiano', 'Kona'];
 
 consola.escribir('Longitud: ' + cafes.longitud);
 consola.escribir(cafes);
@@ -388,7 +388,7 @@ consola.escribir(cafes);
 No tienes que especificar todos los elementos en un arreglo literal. Si colocas dos comas en una fila, el arreglo completa el valor `indefinido` para los elementos no especificados. El siguiente ejemplo crea el arreglo `pez`:
 
 ```esjs
-var pez = ['Sábalo', , 'Pacú'];
+mut pez = ['Sábalo', , 'Pacú'];
 ```
 
 Este arreglo tiene dos elementos con valores y un elemento vacío:
@@ -406,7 +406,7 @@ En el siguiente ejemplo, la `longitud` del arreglo es tres. No hay `miLista[3]`.
 <InlinePlayground>
 
 ```esjs
-var miLista = ['casa', , 'escuela', ];
+mut miLista = ['casa', , 'escuela', ];
 
 consola.escribir('Longitud: ' + miLista.longitud);
 consola.escribir(miLista);
@@ -419,7 +419,7 @@ En el siguiente ejemplo, la `longitud` del arreglo es cuatro, y faltan `miLista[
 <InlinePlayground>
 
 ```esjs
-var miLista = [ ,'casa', , 'escuela'];
+mut miLista = [ ,'casa', , 'escuela'];
 
 consola.escribir('Longitud: ' + miLista.longitud);
 consola.escribir(miLista);
@@ -432,7 +432,7 @@ En el siguiente ejemplo, la `longitud` del arreglo es cuatro, y faltan `miLista[
 <InlinePlayground>
 
 ```esjs
-var miLista = ['casa', , 'escuela', , ];
+mut miLista = ['casa', , 'escuela', , ];
 
 consola.escribir('Longitud: ' + miLista.longitud);
 consola.escribir(miLista);
@@ -507,7 +507,7 @@ El siguiente es un ejemplo de un objeto literal. El primer elemento del objeto `
 <InlinePlayground>
 
 ```esjs
-var ventas = 'Toyota';
+mut ventas = 'Toyota';
 
 funcion tiposAutos(nombre) {
     si (nombre === 'Honda') {
@@ -518,7 +518,7 @@ funcion tiposAutos(nombre) {
 }
 
 // Objeto auto:
-var auto = { 
+mut auto = { 
     miAuto: 'Fiat', 
     obtenerAuto: tiposAutos('Honda'), 
     especial: ventas 
@@ -536,7 +536,7 @@ Además, puedes utilizar un literal numérico o de cadena para el nombre de una 
 <InlinePlayground>
 
 ```esjs
-var auto = { 
+mut auto = { 
     muchosAutos: {
         a: 'Fiat', 
         b: 'Renault'
@@ -557,7 +557,7 @@ No se puede acceder a los nombres de propiedad que no sean identificadores váli
 <InlinePlayground>
 
 ```esjs
-var nombresPropiedadesInusuales = {
+mut nombresPropiedadesInusuales = {
   '': 'Una cadena vacía',
   '!': '¡Bang!'
 }
@@ -576,7 +576,7 @@ En EsJS, los objeto literales se amplían para admitir la configuración del pro
 Juntos, estos también acercan los objetos literales y las declaraciones de clase, y permiten que el diseño basado en objetos se beneficie de algunas de las mismas conveniencias.
 
 ```esjs
-var obj = {
+mut obj = {
     // __proto__
     __proto__: theProtoObj,
     // Abreviatura de "handler: handler"
@@ -636,7 +636,7 @@ Opcionalmente, puedes agregar una etiqueta para permitirte personalizar la const
  simples no pueden.`
 
 // Interpolación de cadenas
-var nombre = 'Carlos', fecha = 'hoy';
+mut nombre = 'Carlos', fecha = 'hoy';
 `Hola ${nombre}, ¿cómo estás ${fecha}?`
 
 // Construye un prefijo de petición HTTP utilizado para interpretar los reemplazos y la construcción
@@ -687,7 +687,7 @@ Puedes insertar comillas dobles dentro de una cadena anteponiendo un carácter d
 <InlinePlayground>
 
 ```esjs
-var oracion = "Él leyó \"La cremación de Sam McGee\" de R.W. Service.";
+mut oracion = "Él leyó \"La cremación de Sam McGee\" de R.W. Service.";
 consola.escribir(oracion);
 ```
 
@@ -700,7 +700,7 @@ También puedes escapar los saltos de línea precediéndolos con una barra inver
 <InlinePlayground>
 
 ```esjs
-var cadena = 'esta cadena \
+mut cadena = 'esta cadena \
 se divide \
 en múltiples \
 líneas.';
@@ -715,7 +715,7 @@ Aunque EsJS no tiene sintaxis "«heredoc»" se puede acercar insertando una barr
 <InlinePlayground>
 
 ```esjs
-var poema =
+mut poema =
 'Aquí me pongo a cantar, \n\
 al compás de la vigüela \n\
 que el hombre que lo desvela \n\
@@ -728,12 +728,12 @@ consola.escribir(poema);
 
 </InlinePlayground>
 
-Tambien se dispone de [`plantillas literales` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals "Currently only available in English (US)"). Esto permite muchas nuevas funciones, ¡incluidas cadenas multilínea!
+También se dispone de [`plantillas literales` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals "Currently only available in English (US)"). Esto permite muchas nuevas funciones, ¡incluidas cadenas multilínea!
 
 <InlinePlayground>
 
 ```esjs
-var poema =
+mut poema =
 `Aquí me pongo a cantar,
 al compás de la vigüela
 que el hombre que lo desvela

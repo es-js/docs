@@ -10,7 +10,7 @@ En EsJS/JavaScript puedes hacer referencia a una variable global declarada más 
 
 ```esjs
 consola.escribir('El valor de a es ' + a); // El valor de a es indefinido
-global a;
+var a;
 ```
 
 </InlinePlayground>
@@ -21,7 +21,7 @@ Este concepto se conoce como **elevación.** Las variables en EsJS son, en ciert
 
 ```esjs
 consola.escribir(x === indefinido); // verdadero
-global x = 3;
+var x = 3;
 ```
 
 </InlinePlayground>
@@ -30,11 +30,11 @@ global x = 3;
 
 ```esjs
 // devolverá un valor de indefinido
-global miVariable = 'mi valor';
+var miVariable = 'mi valor';
 
 (funcion() {
   consola.escribir(miVariable); // indefinido
-  global miVariable = 'valor local';
+  var miVariable = 'valor local';
 })();
 ```
 
@@ -46,29 +46,29 @@ Los ejemplos anteriores se interpretarán de la misma manera que:
 /**
  * Ejemplo 1
  */
-global x;
+var x;
 consola.escribir(x === indefinido); // verdadero
 x = 3;
 
 /**
  * Ejemplo 2
  */
-global miVariable = 'mi valor';
+var miVariable = 'mi valor';
 
 (funcion() {
-  global miVariable;
+  var miVariable;
   consola.escribir(miVariable); // indefinido
   miVariable = 'valor local';
 })();
 ```
 
-Debido a la elevación, todas las declaraciones `global` en una función se deben colocar lo más cerca posible de la parte superior de la función. Esta buena práctica aumenta la claridad del código.
+Debido a la elevación, todas las declaraciones `var` en una función se deben colocar lo más cerca posible de la parte superior de la función. Esta buena práctica aumenta la claridad del código.
 
-En EsJS, `global` y `const` **se elevan pero no se inician**. Hacer referencia a la variable en el bloque antes de la declaración de la variable da como resultado un [`ReferenceError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError), porque la variable está en una "zona muerta temporal" desde el inicio del bloque hasta que se procesa la declaración.
+En EsJS, `var` y `const` **se elevan pero no se inician**. Hacer referencia a la variable en el bloque antes de la declaración de la variable da como resultado un [`ReferenceError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError), porque la variable está en una "zona muerta temporal" desde el inicio del bloque hasta que se procesa la declaración.
 
 ```esjs
 consola.escribir(x); // ReferenceError
-var x = 3;
+mut x = 3;
 ```
 
 ### Elevación de función
@@ -89,7 +89,7 @@ funcion foo() {
 
 baz(); // TypeError: baz no es una función
 
-global baz = funcion() {
+var baz = funcion() {
   consola.escribir('bar2');
 };
 ```

@@ -5,8 +5,8 @@ Un operador de comparación compara sus operandos y devuelve un valor lógico en
 La siguiente tabla describe los operadores de comparación en términos de este código de ejemplo:
 
 ```esjs
-var var1 = 3;
-var var2 = 4;
+mut var1 = 3;
+mut var2 = 4;
 ```
 
 | Operador                       | Descripción                                                                                                                                                                                                      | Ejemplos que devuelven `verdadero`     |

@@ -43,8 +43,8 @@ funcion miFuncion(elObjeto) {
   elObjeto.marca = 'Toyota';
 }
 
-var miAuto = { marca: 'Honda', modelo: 'Accord', año: 1998 };
-var x, y;
+mut miAuto = { marca: 'Honda', modelo: 'Accord', año: 1998 };
+mut x, y;
 
 x = miAuto.marca; // x obtiene el valor "Honda"
 
@@ -70,7 +70,7 @@ Esta función puede ser **anónima**; no tiene por qué tener un nombre. Por eje
 const calcularCuadrado = funcion (numero) {
   retornar numero * numero;
 };
-var x = calcularCuadrado(4); // x obtiene el valor 16
+mut x = calcularCuadrado(4); // x obtiene el valor 16
 consola.escribir(x);
 ```
 
@@ -96,8 +96,8 @@ Las expresiones `funcion` son convenientes cuando se pasa una función como argu
 
 ```esjs
 funcion mapa(f, a) {
-  var resultado = []; // Crea un nuevo arreglo
-  var i; // Declara una variable
+  mut resultado = []; // Crea un nuevo arreglo
+  mut i; // Declara una variable
   para (i = 0; i < a.longitud; i++) {
     resultado[i] = f(a[i]);
   }
@@ -119,7 +119,7 @@ consola.escribir(
 En EsJS, una función se puede definir según una condición. Por ejemplo, la siguiente definición de función define `miFuncion` solo si `num` es igual a `0`:
 
 ```esjs
-var miFuncion;
+mut miFuncion;
 si (num === 0) {
   miFuncion = funcion (elObjeto) {
     elObjeto.marca = "Toyota";
@@ -215,9 +215,9 @@ En otras palabras, una función definida en el ámbito global puede acceder a to
 
 ```esjs
 // Las siguientes variables se definen en el ámbito global
-global num1 = 20,
-       num2 = 3,
-       nombre = "Messi";
+var num1 = 20,
+    num2 = 3,
+    nombre = "Messi";
 
 // Esta función está definida en el ámbito global
 funcion multiplicar() {
@@ -228,7 +228,7 @@ consola.escribir(multiplicar()); // Muestra 60
 
 // Un ejemplo de función anidada
 funcion obtenerPuntaje() {
-  var num1 = 2,
+  mut num1 = 2,
       num2 = 3;
 
   funcion anotar() {
@@ -256,7 +256,7 @@ Una función se puede referir y llamarse a sí misma. Hay tres formas de que una
 Por ejemplo, considera la siguiente definición de función:
 
 ```esjs
-var foo = funcion bar() {
+mut foo = funcion bar() {
   // las instrucciones van aquí
 };
 ```
@@ -272,7 +272,7 @@ Una función que se llama a sí misma se conoce como una _función recursiva_. E
 Por ejemplo, el siguiente bucle...
 
 ```esjs
-var x = 0;
+mut x = 0;
 mientras (x < 10) {
   // "x < 10" es la condición del bucle
   // hacer cosas
@@ -302,7 +302,7 @@ funcion recorrerArbol(nodo) {
     retornar;
   }
   // Hacer algo con el nodo
-  para (var i = 0; i < nodo.nodosDescendientes.longitud; i++) {
+  para (mut i = 0; i < nodo.nodosDescendientes.longitud; i++) {
     recorrerArbol(nodo.nodosDescendientes[i]);
   }
 }
@@ -429,7 +429,7 @@ Cuando dos argumentos o variables en el ámbito de un cierre tienen el mismo nom
 
 ```esjs
 funcion afuera() {
-  var x = 5;
+  mut x = 5;
   funcion adentro(x) {
     retornar x * 2;
   }
@@ -452,9 +452,9 @@ Además, dado que la función interna tiene acceso a el ámbito de la función e
 <InlinePlayground>
 
 ```esjs
-var mascota = funcion (nombre) {
+mut mascota = funcion (nombre) {
   // La función externa define una variable llamada "nombre"
-  var obtenerNombre = funcion () {
+  mut obtenerNombre = funcion () {
     // La función interna tiene acceso a la variable "nombre" de la función externa
     retornar nombre;
   };
@@ -473,8 +473,8 @@ Puede ser mucho más complejo que el código anterior. Se puede devolver un obje
 <InlinePlayground>
 
 ```esjs
-var crearMascota = funcion (nombre) {
-  var sexo;
+mut crearMascota = funcion (nombre) {
+  mut sexo;
 
   retornar {
     establecerNombre: funcion (nuevoNombre) {
@@ -500,7 +500,7 @@ var crearMascota = funcion (nombre) {
   };
 };
 
-var mascota = crearMascota("Lucy");
+mut mascota = crearMascota("Lucy");
 consola.escribir(mascota.obtenerNombre()); // Lucy
 
 mascota.establecerNombre("Charly");
@@ -516,8 +516,8 @@ En el código anterior, la variable `nombre` de la función externa es accesible
 <InlinePlayground>
 
 ```esjs
-var obtenerCodigo = (funcion () {
-  var apiCodigo = "0]Eal(eh&2"; // Un código que no queremos que los externos puedan modificar...
+mut obtenerCodigo = (funcion () {
+  mut apiCodigo = "0]Eal(eh&2"; // Un código que no queremos que los externos puedan modificar...
 
   retornar funcion () {
     retornar apiCodigo;
@@ -534,7 +534,7 @@ consola.escribir(obtenerCodigo()); // Devuelve el apiCodigo
 > Si una función encerrada define una variable con el mismo nombre que una variable en el ámbito externo, entonces no hay forma de hacer referencia a la variable en el ámbito externo nuevamente. (La variable de ámbito interno "anula" la externa, hasta que el programa sale de el ámbito interno).
 > 
 > ```esjs
-> var crearMascota = funcion (nombre) {
+> mut crearMascota = funcion (nombre) {
 >   // La función externa define una variable llamada "nombre".
 >   retornar {
 >     establecerNombre: funcion (nombre) {
@@ -563,8 +563,8 @@ Por ejemplo, considera una función que concatena varias cadenas. El único argu
 
 ```esjs
 funcion miConcatenacion(separador) {
-  var resultado = ""; // inicia lista
-  var i;
+  mut resultado = ""; // inicia lista
+  mut i;
   // itera a través de argumentos
   para (i = 1; i < arguments.longitud; i++) {
     resultado += arguments[i] + separador;
@@ -639,7 +639,7 @@ funcion multiplicar(multiplicador, ...losArgumentos) {
   retornar losArgumentos.mapa((x) => multiplicador * x);
 }
 
-var arr = multiplicar(2, 1, 2, 3);
+mut arr = multiplicar(2, 1, 2, 3);
 consola.escribir(arr); // [2, 4, 6]
 ```
 
@@ -654,15 +654,15 @@ Las Funciones Flecha proporcionan  _funciones más cortas_ y _no vinculantes_ de
 En algunos patrones funcionales, las funciones más cortas son bienvenidas. Compara:
 
 ```esjs
-var a = ["Hidrógeno", "Helio", "Litio", "Berilio"];
+mut a = ["Hidrógeno", "Helio", "Litio", "Berilio"];
 
-var a2 = a.mapa(funcion (s) {
+mut a2 = a.mapa(funcion (s) {
   retornar s.longitud;
 });
 
 consola.escribir(a2); // muestra [8, 6, 7, 9]
 
-var a3 = a.mapa((s) => s.longitud);
+mut a3 = a.mapa((s) => s.longitud);
 
 consola.escribir(a3); // muestra [8, 6, 7, 9]
 ```
@@ -684,14 +684,14 @@ funcion Persona() {
   }, 1000);
 }
 
-var p = new Persona();
+mut p = new Persona();
 ```
 
 En ECMAScript 3/5, este problema se solucionó asignando el valor en `ambiente` a una variable que se podría cerrar.
 
 ```esjs
 funcion Persona() {
-  global esteOtro = este;
+  var esteOtro = este;
   // Elige uno y se congruente.
   esteOtro.edad = 0;
 
@@ -716,7 +716,7 @@ funcion Persona() {
   }, 1000);
 }
 
-var p = new Persona();
+mut p = new Persona();
 ```
 
 ## Funciones predefinidas

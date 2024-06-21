@@ -77,7 +77,7 @@ Puedes declarar una variable de dos formas:
 
 Una variable declarada usando la instrucción `var` o `mut`, sin un valor asignado especificado, tiene el valor de [`indefinido`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 
-<InlinePlayground only-playground>
+<EsEditor hide-slot hide-editor="false">
 
 ```esjs
 var a;
@@ -87,21 +87,21 @@ mut x;
 consola.escribir('El valor de x es ' + x); // El valor de x es indefinido
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Un intento de acceder a una variable no declarada da como resultado el disparo de una excepción [`ReferenceError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError):
 
-<InlinePlayground only-playground>
+<EsEditor hide-slot hide-editor="false">
 
 ```esjs
 consola.escribir('El valor de x es ' + x); // El valor de x es indefinido
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Puedes usar `indefinido` para determinar si una variable tiene un valor. En el siguiente código, a la variable `entrada` no se le asigna un valor y la declaración `si` evalúa a `verdadero`.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut entrada;
@@ -112,11 +112,11 @@ si (entrada === indefinido) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 El valor `indefinido` se comporta como `falso` cuando se usa en un contexto booleano. Por ejemplo, el siguiente código ejecuta la función `miFuncion` porque el elemento `0` de `miLista` es `indefinido`:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut miLista = [];
@@ -125,29 +125,29 @@ si (!miLista[0]) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 El valor `indefinido` se convierte en `NeN` cuando se usa en contexto numérico.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut a;
 consola.escribir(a + 2);  // Evalúa a NeN
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Cuando evalúas una variable [`nulo`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null), el valor nulo se comporta como `0` en contextos numéricos y como `falso` en contextos booleanos. Por ejemplo:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut n = nulo;
 consola.escribir(n * 32); // Registrará 0 en la consola
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### Ámbito de variables
 
@@ -155,7 +155,7 @@ Cuando declaras una variable fuera de cualquier función, se denomina variable _
 
 Por ejemplo, el siguiente código registrará `5`, porque el ámbito de `x` es el contexto global (o el contexto de la función si el código es parte de una función). El ámbito de `x` no se limita al bloque de instrucciones `si` inmediato.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 si (verdadero) {
@@ -164,11 +164,11 @@ si (verdadero) {
 consola.escribir(x);  // x es 5
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Este comportamiento cambia cuando se usa la declaración `mut`.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 si (verdadero) {
@@ -177,7 +177,7 @@ si (verdadero) {
 consola.escribir(x); // ReferenceError: x no está definida
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### Variables globales
 
@@ -201,7 +201,7 @@ Las reglas de ámbito para las constantes son las mismas que las de ámbito de b
 
 Si bien una constante no puede cambiar su valor una vez definida, esto no ocurre con las propiedades de los objetos asignados a constantes; de manera que el siguiente programa se ejecuta sin problemas:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 const MI_OBJETO = {'clave': 'valor'};
@@ -211,11 +211,11 @@ MI_OBJETO.clave = 'otroValor';
 consola.escribir(MI_OBJETO.clave); // Muestra "otroValor"
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Además, el contenido de los arreglos tampoco está protegido cuando es asignado a una constante, es por esto que la siguiente declaración se ejecuta sin problemas.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 const MI_ARREGLO = ['HTML','CSS','JavaScript'];
@@ -223,24 +223,24 @@ MI_ARREGLO.push('EsJS');
 consola.escribir(MI_ARREGLO); // Muestra ['HTML','CSS','JavaScript','EsJS'];
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 > **Nota:** No puedes declarar una constante con el mismo nombre que una función o una variable en el mismo ámbito.
 >
 > Por ejemplo, en el siguiente programa, en la línea 1 se declara una función `f`, y luego en la línea 2 se intenta declarar una constante `f`, lo cual causa una excepción:
 >
-> <InlinePlayground>
+> <EsEditor>
 >
 > ```esjs{2}
 > funcion f() {};
 > const f = 5;
 > ```
 >
-> </InlinePlayground>
+> </EsEditor>
 >
 > En el siguiente programa, se declara una variable global `g` en la línea 3 (la cual es [Elevada](/avanzado/elevacion)), y en la línea 2 se intenta declarar una constante `g`, lo cual causa una excepción:
 >
-> <InlinePlayground>
+> <EsEditor>
 >
 > ```esjs
 > funcion f() {
@@ -249,7 +249,7 @@ consola.escribir(MI_ARREGLO); // Muestra ['HTML','CSS','JavaScript','EsJS'];
 > }
 > ```
 >
-> </InlinePlayground>
+> </EsEditor>
 
 ## Tipos de datos
 
@@ -291,7 +291,7 @@ Debido a que EsJS se tipifica dinámicamente, esta asignación no genera un mens
 
 En expresiones que involucran valores numéricos y de cadena con el operador `+`, EsJS convierte los valores numéricos en cadenas. Por ejemplo, considera las siguientes declaraciones:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut x = 'La respuesta es ' + 42; // "La respuesta es 42"
@@ -300,11 +300,11 @@ consola.escribir(x);
 consola.escribir(y);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Con todos los demás operadores, EsJS _no_ convierte valores numéricos en cadenas. Por ejemplo:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 consola.escribir('37' - 7); // 30
@@ -313,7 +313,7 @@ consola.escribir('37' * 7); // 259
 consola.escribir('37' + 7); // "377"
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### Convertir texto a números
 
@@ -326,7 +326,7 @@ En el caso que un valor representando un número está en memoria como texto (ca
 
 Por ejemplo, si tenemos una variable `x` del tipo `Cadena`, y queremos sumarle un valor utilizando el operador `+`, esto resulta en realidad en la operación [`Concatenación`](/wip), en lugar de la [`Suma aritmética`](/wip). Por lo que finalmente estamos concatenando (uniendo) dos cadenas de texto:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut x = '2000'; // x es del tipo "Cadena"
@@ -336,11 +336,11 @@ mut x = '2000'; // x es del tipo "Cadena"
 consola.escribir(x + 23);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Para este caso, es necesario convertir el contenido de la variable `x` de `Cadena` a `Número` (entero en este caso):
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut x = '2000'; // x es del tipo "Cadena"
@@ -350,7 +350,7 @@ mut xConvertido = Numero.interpretarEntero(x); // xConvetido es del tipo "Númer
 consola.escribir(xConvertido + 23);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Literales
 
@@ -370,7 +370,7 @@ Un arreglo literal es una lista de cero o más expresiones, cada una de las cual
 
 El siguiente ejemplo crea el arreglo `cafes` con tres elementos y `longitud` de tres:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut cafes = ['French Roast', 'Colombiano', 'Kona'];
@@ -379,7 +379,7 @@ consola.escribir('Longitud: ' + cafes.longitud);
 consola.escribir(cafes);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 > **Nota:** Los arreglos literales también son objetos `Arreglo`. Consulta [`Arreglo`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array) y `Colecciones indexadas` para obtener detalles sobre los objetos `Array`.
 
@@ -403,7 +403,7 @@ Si incluyes una coma al final de la lista de los elementos, la coma es ignorada.
 
 En el siguiente ejemplo, la `longitud` del arreglo es tres. No hay `miLista[3]`. Todas las demás comas de la lista indican un nuevo elemento.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut miLista = ['casa', , 'escuela', ];
@@ -412,11 +412,11 @@ consola.escribir('Longitud: ' + miLista.longitud);
 consola.escribir(miLista);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 En el siguiente ejemplo, la `longitud` del arreglo es cuatro, y faltan `miLista[0]` y `miLista[2]`.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut miLista = [ ,'casa', , 'escuela'];
@@ -425,11 +425,11 @@ consola.escribir('Longitud: ' + miLista.longitud);
 consola.escribir(miLista);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 En el siguiente ejemplo, la `longitud` del arreglo es cuatro, y faltan `miLista[1]` y `miLista[3]`. **Solo se ignora la última coma.**
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut miLista = ['casa', , 'escuela', , ];
@@ -438,7 +438,7 @@ consola.escribir('Longitud: ' + miLista.longitud);
 consola.escribir(miLista);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Entender el comportamiento de las comas adicionales es importante para comprender EsJS como lenguaje.
 
@@ -504,7 +504,7 @@ Un objeto literal es una lista de cero o más pares de nombres de propiedad y va
 
 El siguiente es un ejemplo de un objeto literal. El primer elemento del objeto `auto` define una propiedad, `miAuto`, y le asigna una nueva cadena, "`Fiat`"; al segundo elemento, la propiedad `obtenerAuto`, se le asigna inmediatamente el resultado de invocar a la función `tiposAutos("Honda");` el tercer elemento, la propiedad `especial`, utiliza una variable (`ventas`) existente.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut ventas = 'Toyota';
@@ -529,11 +529,11 @@ consola.escribir(auto.obtenerAuto); // Honda
 consola.escribir(auto.especial); // Toyota
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Además, puedes utilizar un literal numérico o de cadena para el nombre de una propiedad o anidar un objeto dentro de otro. El siguiente ejemplo usa estas opciones.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut auto = { 
@@ -548,13 +548,13 @@ consola.escribir(auto.muchosAutos.b); // Renault
 consola.escribir(auto[7]); // Toyota
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Los nombres de propiedad de los objetos pueden ser cualquier cadena, incluida la cadena vacía. Si el nombre de la propiedad no fuera un [identificador](https://developer.mozilla.org/es/docs/Glossary/Identifier) o un número EsJS válido, debe ir entre comillas.
 
 No se puede acceder a los nombres de propiedad que no sean identificadores válidos como un punto (`.`), propiedad, pero _se pueden_ acceder y configurar con la notación tipo arreglo ("`[]`").
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut nombresPropiedadesInusuales = {
@@ -567,7 +567,7 @@ consola.escribir(nombresPropiedadesInusuales.!);    // SyntaxError: símbolo ine
 consola.escribir(nombresPropiedadesInusuales['!']); // ¡Bang!
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 #### Objetos literales mejorados
 
@@ -611,14 +611,14 @@ Los siguientes son ejemplos de cadenas literales:
 
 Puedes llamar a cualquiera de los métodos del objeto [`Cadena`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String) en un valor de cadena literal. EsJS automáticamente convierte la cadena literal en un objeto `Cadena` temporal, llama al método y luego descarta el objeto `Cadena` temporal. También puedes usar la propiedad `String.longitud` con una cadena literal:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 // Imprimirá el número de caracteres en la cadena, incluidos los espacios en blanco.
 consola.escribir("EsJS: JavaScript con sintaxis en Español".longitud)  // 27.
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 En EsJS, también están disponibles las _plantillas literales_. Las plantillas literales están encerradas por la comilla invertida (`` ` ``) ([Acento\_grave](https://es.wikipedia.org/wiki/Acento_grave)) en lugar de comillas simples o dobles.
 
@@ -684,20 +684,20 @@ Para caracteres no enumerados en la tabla, la precedencia de la barra inversa es
 
 Puedes insertar comillas dobles dentro de una cadena anteponiendo un carácter de barra inversa. Esto se conoce como _escapar_ las comillas. Por ejemplo:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut oracion = "Él leyó \"La cremación de Sam McGee\" de R.W. Service.";
 consola.escribir(oracion);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Para incluir una barra invertida literal dentro de una cadena, debes escapar el carácter de barra invertida. Por ejemplo, para asignar la ruta del archivo `c:\temp` a una cadena, usa lo siguiente:
 
 También puedes escapar los saltos de línea precediéndolos con una barra invertida. La barra invertida y el salto de línea se eliminan del valor de la cadena.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut cadena = 'esta cadena \
@@ -708,11 +708,11 @@ líneas.';
 consola.escribir(cadena);   // esta cadena se divide en múltiples líneas.
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Aunque EsJS no tiene sintaxis "«heredoc»" se puede acercar insertando una barra inversa y un salto de linea al final de cada linea:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut poema =
@@ -726,11 +726,11 @@ con el cantar se consuela.';
 consola.escribir(poema);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 También se dispone de [`plantillas literales` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals "Currently only available in English (US)"). Esto permite muchas nuevas funciones, ¡incluidas cadenas multilínea!
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut poema =
@@ -744,4 +744,4 @@ con el cantar se consuela.`;
 consola.escribir(poema);
 ```
 
-</InlinePlayground>
+</EsEditor>

@@ -8,7 +8,7 @@ Si `condicion` es `verdadero`, el operador tiene el valor de `valor1`. De lo con
 
 Por ejemplo:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut edad = 20;
@@ -17,6 +17,6 @@ mut estado = (edad >= 18) ? 'Mayor de edad' : 'Menor de edad';
 consola.escribir(estado);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Esta declaración asigna el valor "`Mayor de edad`" a la variable `estado` si `edad` es de dieciocho años o más. De lo contrario, asigna el valor "`Menor de edad`" a `estado`.

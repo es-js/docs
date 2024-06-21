@@ -6,27 +6,27 @@ En EsJS/JavaScript ocurre un mecanismo conocido como "Elevación" (_hoisting_ en
 
 En EsJS/JavaScript puedes hacer referencia a una variable global declarada más tarde, sin obtener una excepción.
 
-<InlinePlayground only-playground>
+<EsEditor hide-slot hide-editor="false">
 
 ```esjs
 consola.escribir('El valor de a es ' + a); // El valor de a es indefinido
 var a;
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Este concepto se conoce como **elevación.** Las variables en EsJS son, en cierto sentido, "elevadas" (o "izadas") a la parte superior de la función o declaración. Sin embargo, las variables que se elevan devuelven un valor de `indefinido`. Entonces, incluso si la declaras e inicias después de usarla o hacer referencia a esta variable, todavía devuelve `indefinido`.
 
-<InlinePlayground only-playground>
+<EsEditor hide-slot hide-editor="false">
 
 ```esjs
 consola.escribir(x === indefinido); // verdadero
 var x = 3;
 ```
 
-</InlinePlayground>
+</EsEditor>
 
-<InlinePlayground only-playground>
+<EsEditor hide-slot hide-editor="false">
 
 ```esjs
 // devolverá un valor de indefinido
@@ -38,7 +38,7 @@ var miVariable = 'mi valor';
 })();
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Los ejemplos anteriores se interpretarán de la misma manera que:
 

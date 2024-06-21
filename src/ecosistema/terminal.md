@@ -10,7 +10,7 @@ El objeto Terminal provee funciones para interactuar con el Usuario.
 
 Escribe un mensaje en la terminal.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { Terminal } desde "@es-js/terminal"
@@ -18,13 +18,13 @@ importar { Terminal } desde "@es-js/terminal"
 Terminal.escribir("Hola mundo desde EsJS")
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### leer
 
 Lee un valor ingresado por el Usuario.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { Terminal } desde "@es-js/terminal"
@@ -36,13 +36,13 @@ const nombre = esperar Terminal.leer()
 Terminal.escribir(`Hola ${nombre}`)
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### leerCadena
 
 Lee una cadena ingresada por el Usuario.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { Terminal } desde "@es-js/terminal"
@@ -56,13 +56,13 @@ const apellido = esperar Terminal.leerCadena()
 Terminal.escribir(`Hola ${nombre} ${apellido}`)
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### leerNumero
 
 Lee un número ingresado por el Usuario.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { Terminal } desde "@es-js/terminal"
@@ -73,13 +73,13 @@ const edad = esperar Terminal.leerNumero()
 Terminal.escribir(`Tienes ${edad} años`)
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### leerSecreto
 
 Lee un valor ingresado por el Usuario sin mostrarlo en la terminal.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { Terminal } desde "@es-js/terminal"
@@ -93,13 +93,13 @@ const contraseña2 = esperar Terminal.leerSecreto()
 Terminal.escribir(contraseña === contraseña2 ? "Las contraseñas coinciden" : "Las contraseñas no coinciden")
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### leerEnter
 
 Lee el ingreso de un Enter por parte del Usuario.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { Terminal } desde "@es-js/terminal"
@@ -109,13 +109,13 @@ esperar Terminal.leerEnter()
 Terminal.escribir("Continuando...")
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### limpiar
 
 Limpia la terminal.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { Terminal } desde "@es-js/terminal"
@@ -126,13 +126,13 @@ esperar Terminal.leerEnter()
 Terminal.limpiar()
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### centrar
 
 Centra el texto en la terminal.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { Terminal } desde "@es-js/terminal"
@@ -140,13 +140,13 @@ importar { Terminal } desde "@es-js/terminal"
 Terminal.escribir(Terminal.centrar("Hola mundo desde EsJS"))
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### alinearIzquierda
 
 Alinea el texto a la izquierda en la terminal.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { Terminal } desde "@es-js/terminal"
@@ -154,13 +154,13 @@ importar { Terminal } desde "@es-js/terminal"
 Terminal.escribir(Terminal.alinearIzquierda("Hola mundo desde EsJS"))
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### alinearDerecha
 
 Alinea el texto a la derecha en la terminal.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { Terminal } desde "@es-js/terminal"
@@ -168,4 +168,4 @@ importar { Terminal } desde "@es-js/terminal"
 Terminal.escribir(Terminal.alinearDerecha("Hola mundo desde EsJS"))
 ```
 
-</InlinePlayground>
+</EsEditor>

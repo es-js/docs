@@ -8,7 +8,7 @@ Una constante es un espacio de memoria que almacena un valor que no puede ser mo
 
 ## Ejemplo
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
     const PI = 3.1416
@@ -16,4 +16,4 @@ Una constante es un espacio de memoria que almacena un valor que no puede ser mo
     consola.escribir(PI) // Muestra `3.1416`
 ```
 
-</InlinePlayground>
+</EsEditor>

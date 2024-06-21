@@ -4,7 +4,7 @@ Los bucles ofrecen una forma rápida y sencilla de hacer algo repetidamente. Est
 
 Puedes pensar en un bucle como una versión computarizada del juego en la que le dices a alguien que dé _X_ pasos en una dirección y luego _Y_ pasos en otra. Por ejemplo, la idea "Ve cinco pasos hacia el este" se podría expresar de esta manera como un bucle:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 para (mut paso = 0; paso < 5; paso++) {
@@ -13,7 +13,7 @@ para (mut paso = 0; paso < 5; paso++) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Hay diferentes tipos de bucles, pero esencialmente, todos hacen lo mismo: repiten una acción varias veces. (¡Ten en cuenta que es posible que ese número sea cero!).
 
@@ -54,7 +54,7 @@ Cuando se ejecuta un bucle `para`, ocurre lo siguiente:
 
 El siguiente ejemplo muestra los 10 primeros números del Sistema Decimal.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut i;
@@ -63,7 +63,7 @@ para (i = 0; i < 10; i++) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Declaración `hacer...mientras`
 
@@ -85,7 +85,7 @@ Si `condición` es `verdadero`, la declaración se ejecuta de nuevo. Al final de
 
 Similar al ejemplo anterior, pero utilizando el bucle `hacer`.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut i = 0; 
@@ -96,7 +96,7 @@ hacer {
 } mientras (i < 10);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Declaración `mientras`
 
@@ -116,7 +116,7 @@ Si la `condición` se vuelve `falso`, la `instrucción` dentro del bucle se deja
 
 Similar al ejemplo anterior, pero utilizando el bucle `mientras`.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut n = 0;
@@ -126,13 +126,13 @@ mientras (n < 10) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 #### Ejemplo 2
 
 Evita los bucles infinitos. Asegúrate de que la condición en un bucle eventualmente se convierta en `falso`; de lo contrario, el bucle nunca terminará y podría provocar que tu aplicación entre en un estado inconsistente. El siguiente ejemplo muestra cómo se comporta un bucle infinito. Aunque, en este caso, EsJS Editor previene la ejecución infinita, ya que de lo contrario tu navegador web colapsaría debido a la ejecución infinita de las instrucciones:
 
-[//]: # (<InlinePlayground>)
+[//]: # (<EsEditor>)
 
 ```esjs
 // ¡Los bucles infinitos son malos!
@@ -143,7 +143,7 @@ mientras (i > 0) {
 }
 ```
 
-[//]: # (</InlinePlayground>)
+[//]: # (</EsEditor>)
 
 ## Declaración `etiquetada`
 
@@ -159,7 +159,7 @@ El valor de `etiqueta` puede ser cualquier identificador de EsJS que no sea una 
 
 En este ejemplo, la etiqueta `bucleEtiquetado` identifica un bucle `mientras`.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut i = 0;
@@ -169,7 +169,7 @@ bucleEtiquetado: mientras (i < 10) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Declaración `romper`
 
@@ -192,7 +192,7 @@ romper [etiqueta]; // con etiqueta
 
 El siguiente ejemplo pretende mostrar los primeros 10 números del Sistema Decimal. Sin embargo, dentro de la declaración `para`, hay una declaración `si` que ejecuta la instrucción `romper` cuando `i` es mayor a `5`. De esta manera, sólo se muestran los primeros 6 números (del 0 al 5).
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 para (mut i = 0; i < 10; i++) {
@@ -204,7 +204,7 @@ para (mut i = 0; i < 10; i++) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### 
 
@@ -212,7 +212,7 @@ para (mut i = 0; i < 10; i++) {
 
 Haciendo uso declaraciones etiquetadas, el siguiente ejemplo cómo se puede `romper`  una declaración etiquetada, cuando oc
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut x = 0;
@@ -233,7 +233,7 @@ bucleCancelable: mientras (verdadero) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Declaración `continuar`
 
@@ -253,7 +253,7 @@ continuar [etiqueta]; // con etiqueta
 
 El siguiente ejemplo muestra un bucle `mientras` con una instrucción `continuar` que se ejecuta cuando el valor de `i` es `3`. Por lo tanto, `n` toma los valores `1`, `3`, `7` y `12`. Si comentas la declaración `continuar` de la línea 6, `n` toma los valores `1`, `3`, `6`, `10`, `15`.
 
-<InlinePlayground only-playground>
+<EsEditor hide-slot hide-editor="false">
 
 ```esjs
 mut i = 0;
@@ -269,7 +269,7 @@ mientras (i < 5) {
 // Produce: 1, 3, 7, 12
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 #### Ejemplo 2
 
@@ -277,7 +277,7 @@ Una declaración etiquetada `bucleI` contiene una declaración etiquetada `bucle
 
 Si `continuar` tuviera una etiqueta de `bucleI`, el programa continuaría en la parte superior de la declaración `bucleI`.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut i = 0;
@@ -299,7 +299,7 @@ bucleI: mientras (i < 4) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Declaración `para...en`
 
@@ -315,7 +315,7 @@ para (variable en objeto) {
 
 La siguiente función toma como argumento un objeto y el nombre del objeto. Luego itera sobre todas las propiedades del objeto y devuelve una cadena que enumera los nombres de las propiedades y sus valores.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion mostrarPropiedades(objeto, objeto_nombre) {
@@ -335,7 +335,7 @@ const auto = {
 consola.escribir(mostrarPropiedades(auto, 'auto'));
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### Arreglos
 
@@ -355,7 +355,7 @@ para (variable de objeto) {
 
 El siguiente ejemplo muestra la diferencia entre un bucle `para...de` y un bucle [`para...en`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for...in). Mientras que `para...en` itera sobre los nombres de propiedad, `para...de` itera sobre los valores de propiedad:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 const lista = [3, 5, 7];
@@ -372,4 +372,4 @@ para (mut i de lista) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>

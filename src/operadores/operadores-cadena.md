@@ -2,19 +2,19 @@ Además de los operadores de comparación, que se pueden usar en valores de cade
 
 Por ejemplo,
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 consola.escribir('mi ' + 'cadena'); // Muestra "mi cadena"
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 El operador de asignación abreviada `+=` también se puede utilizar para concatenar cadenas.
 
 Por ejemplo,
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut miCadena = 'alfa';
@@ -23,4 +23,4 @@ miCadena += 'beto'; // se evalúa como "alfabeto" y asigna este valor a miCadena
 consola.escribir(miCadena); // Muestra "alfabeto"
 ```
 
-</InlinePlayground>
+</EsEditor>

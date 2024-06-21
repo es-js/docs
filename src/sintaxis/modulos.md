@@ -12,7 +12,7 @@ importar { x } desde './archivo.esjs';
 
 ### Ejemplo
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { Terminal } desde '@es-js/terminal'
@@ -20,7 +20,7 @@ importar { Terminal } desde '@es-js/terminal'
 Terminal.escribir('Hola mundo!')
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Exportar
 

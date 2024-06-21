@@ -20,7 +20,7 @@ elegir (expresion) {
 
 ## Ejemplo
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut dia = 2;
@@ -54,4 +54,4 @@ elegir (dia) {
 
 ```
 
-</InlinePlayground>
+</EsEditor>

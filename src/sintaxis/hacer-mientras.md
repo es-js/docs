@@ -10,7 +10,7 @@ hacer {
 
 ## Ejemplo
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut i = 0;
@@ -21,4 +21,4 @@ hacer {
 } mientras (i < 5);
 ```
 
-</InlinePlayground>
+</EsEditor>

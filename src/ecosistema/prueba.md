@@ -10,7 +10,7 @@ Las funciones de prueba se utilizan para ejecutar código y verificar que el res
 
 Ejecuta una prueba unitaria.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 importar { prueba } desde "@es-js/prueba"
@@ -20,13 +20,13 @@ prueba("Nombre de mi prueba", funcion () {
 })
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### pruebas
 
 Ejecuta varias pruebas unitarias.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 importar { pruebas } desde "@es-js/prueba"
@@ -41,7 +41,7 @@ pruebas({
 })
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Funciones de aserción
 
@@ -51,7 +51,7 @@ Las funciones de aserción se utilizan para verificar que una condición se cump
 
 Afirma que una expresión es verdadera.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 importar { afirmar, prueba } desde "@es-js/prueba"
@@ -61,13 +61,13 @@ prueba("1 + 1 es igual a 2", funcion () {
 })
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### afirmarIguales
 
 Afirma que dos valores son iguales.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 importar { afirmarIguales, prueba } desde "@es-js/prueba"
@@ -77,13 +77,13 @@ prueba("1 + 1 es igual a 2", funcion () {
 })
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### afirmarDistinto
 
 Afirma que dos valores son distintos.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 importar { afirmarDistinto, prueba } desde "@es-js/prueba"
@@ -93,13 +93,13 @@ prueba("1 + 1 no es igual a 3", funcion () {
 })
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### afirmarSimilares
 
 Afirma que dos valores son similares (es decir, que son iguales pero no necesariamente del mismo tipo).
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 importar { afirmarSimilares, prueba } desde "@es-js/prueba"
@@ -109,13 +109,13 @@ prueba("1 + 1 es igual a 2", funcion () {
 })
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### afirmarVerdadero
 
 Afirma que una expresión es verdadera.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 importar { afirmarVerdadero, prueba } desde "@es-js/prueba"
@@ -125,13 +125,13 @@ prueba("1 + 1 es igual a 2", funcion () {
 })
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### afirmarFalso
 
 Afirma que una expresión es falsa.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 importar { afirmarFalso, prueba } desde "@es-js/prueba"
@@ -141,7 +141,7 @@ prueba("1 + 1 no es igual a 3", funcion () {
 })
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 
 ## Funciones de prueba asincrónicas
@@ -152,7 +152,7 @@ Las funciones de prueba asincrónicas se utilizan para realizar pruebas unitaria
 
 Ejecuta una prueba unitaria asincrónica.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 importar { pruebaAsincrona } desde "@es-js/prueba"
@@ -162,13 +162,13 @@ pruebaAsincrona("Nombre de mi prueba asincrónica", asincrono funcion () {
 })
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### pruebasAsincronas
 
 Ejecuta varias pruebas unitarias asincrónicas.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 importar { pruebasAsincronas } desde "@es-js/prueba"
@@ -183,4 +183,4 @@ pruebasAsincronas({
 })
 ```
 
-</InlinePlayground>
+</EsEditor>

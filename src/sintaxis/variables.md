@@ -12,7 +12,7 @@ Las variables locales son variables que solo pueden ser accedidas desde el bloqu
 
 ### Ejemplo
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
     si (verdadero) {
@@ -29,7 +29,7 @@ Las variables locales son variables que solo pueden ser accedidas desde el bloqu
     consola.escribir(tipoDe x)
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Variables globales `var`
 
@@ -41,7 +41,7 @@ Las variables globales son variables que pueden ser accedidas desde cualquier pa
 
 ### Ejemplo
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
     si (verdadero) {
@@ -58,4 +58,4 @@ Las variables globales son variables que pueden ser accedidas desde cualquier pa
     consola.escribir(tipoDe x)
 ```
 
-</InlinePlayground>
+</EsEditor>

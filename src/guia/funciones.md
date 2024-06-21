@@ -18,7 +18,7 @@ Una **definición de función** (también denominada **declaración de función*
 
 Por ejemplo, el siguiente código define una función simple llamada `cuadrado`:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion cuadrado(numero) {
@@ -28,7 +28,7 @@ funcion cuadrado(numero) {
 consola.escribir(cuadrado(3));
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 La función `cuadrado` toma un parámetro, llamado `numero`. La función consta de una declaración que dice que devuelva el parámetro de la función (es decir, `numero`) multiplicado por sí mismo. La instrucción `retornar` especifica el valor devuelto por la función: `retornar numero * numero `.
 
@@ -36,7 +36,7 @@ Los parámetros primitivos (como `Cadena`, `Numero`, `Booleano`, etc.) se pasan 
 
 En cambio, los objetos (es decir, un valor no primitivo, como [`Arreglo`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array) o un objeto definido por el usuario) se pasan a las funciones **por referencia**; una referencia al objeto se pasa a la función, y si la función cambia las propiedades del objeto, **ese cambio es visible fuera de la función**, como se muestra en el siguiente ejemplo:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion miFuncion(elObjeto) {
@@ -56,7 +56,7 @@ consola.escribir('x: ' + x);
 consola.escribir('y: ' + y);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### Expresiones `funcion`
 
@@ -64,7 +64,7 @@ Si bien la declaración de función anterior sintácticamente es una declaració
 
 Esta función puede ser **anónima**; no tiene por qué tener un nombre. Por ejemplo, la función `cuadrado` se podría haber definido como:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 const calcularCuadrado = funcion (numero) {
@@ -74,11 +74,11 @@ mut x = calcularCuadrado(4); // x obtiene el valor 16
 consola.escribir(x);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Sin embargo, _puedes_ proporcionar un nombre con una expresión `funcion`. Proporcionar un nombre permite que la función se refiera a sí misma y también facilita la identificación de la función en el seguimiento de la pila de un depurador:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 const factorial = funcion fac(n) {
@@ -88,11 +88,11 @@ const factorial = funcion fac(n) {
 consola.escribir(factorial(5));
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Las expresiones `funcion` son convenientes cuando se pasa una función como argumento a otra función. El siguiente ejemplo muestra una función `mapa` que debería recibir una función como primer argumento y un arreglo como segundo argumento.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion mapa(f, a) {
@@ -114,7 +114,7 @@ consola.escribir(
 )
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 En EsJS, una función se puede definir según una condición. Por ejemplo, la siguiente definición de función define `miFuncion` solo si `num` es igual a `0`:
 
@@ -145,7 +145,7 @@ La declaración anterior llama a la función con un argumento de `5`. La funció
 
 Las funciones deben estar _dentro del ámbito_ cuando se llaman, pero la declaración de la función se puede elevar (cuando aparece debajo de la llamada en el código), como en este ejemplo:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 consola.escribir(cuadrado(5));
@@ -155,7 +155,7 @@ funcion cuadrado(n) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 > **Nota:** Esto solo funciona cuando se define la función usando la sintaxis anterior (es decir, `funcion nombreFuncion() {}`). 
 > 
@@ -179,7 +179,7 @@ Los argumentos de una función no se limitan a cadenas y números, también pued
 
 Una función se puede llamar a sí misma. Por ejemplo, aquí hay una función que calcula factoriales de forma recursiva:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion factorial(n) {
@@ -199,7 +199,7 @@ consola.escribir(factorial(4)); // Muestra el valor 24
 consola.escribir(factorial(5)); // Muestra el valor 120
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Hay otras formas de llamar funciones. A menudo hay casos en los que una función se tiene que llamar dinámicamente, o el número de argumentos de una función varía, o en los que el contexto de la llamada a la función se tiene que establecer en un determinado objeto específico en tiempo de ejecución.
 
@@ -211,7 +211,7 @@ No se puede acceder a las variables definidas dentro de una función desde cualq
 
 En otras palabras, una función definida en el ámbito global puede acceder a todas las variables definidas en el ámbito global. Una función definida dentro de otra función también puede acceder a todas las variables definidas en su función principal y a cualquier otra variable a la que tenga acceso la función principal.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 // Las siguientes variables se definen en el ámbito global
@@ -241,7 +241,7 @@ funcion obtenerPuntaje() {
 consola.escribir(obtenerPuntaje()); // Muestra "Messi anotó 5"
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Ámbito y la pila de funciones
 
@@ -314,7 +314,7 @@ Es posible convertir cualquier algoritmo recursivo en uno no recursivo, pero la 
 
 De hecho, la recursividad en sí misma usa una pila: la pila de funciones. El comportamiento similar a una pila se puede ver en el siguiente ejemplo:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion foo(i) {
@@ -337,7 +337,7 @@ foo(3);
 // fin: 3
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### Funciones anidadas y cierres
 
@@ -449,7 +449,7 @@ Sin embargo, la función externa _no_ tiene acceso a las variables y funciones d
 
 Además, dado que la función interna tiene acceso a el ámbito de la función externa, las variables y funciones definidas en la función externa vivirán más que la duración de la ejecución de la función externa, si la función interna logra sobrevivir más allá de la vida de la función externa. Se crea un cierre cuando la función interna de alguna manera se pone a disposición de cualquier ámbito fuera de la función externa.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut mascota = funcion (nombre) {
@@ -466,11 +466,11 @@ const miMascota = mascota("Lucy");
 consola.escribir(miMascota()); // Muestra "Lucy"
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Puede ser mucho más complejo que el código anterior. Se puede devolver un objeto que contiene métodos para manipular las variables internas de la función externa.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut crearMascota = funcion (nombre) {
@@ -509,11 +509,11 @@ consola.escribir(mascota.obtenerSexo()); // macho
 consola.escribir(mascota.obtenerNombre()); // Charly
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 En el código anterior, la variable `nombre` de la función externa es accesible para las funciones internas, y no hay otra forma de acceder a las variables internas excepto a través de las funciones internas. Las variables internas de las funciones internas actúan como almacenes seguros para los argumentos y variables externos. Contienen datos "persistentes" y "encapsulados" para que trabajen las funciones internas. Las funciones ni siquiera tienen que estar asignadas a una variable o tener un nombre.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut obtenerCodigo = (funcion () {
@@ -527,7 +527,7 @@ mut obtenerCodigo = (funcion () {
 consola.escribir(obtenerCodigo()); // Devuelve el apiCodigo
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 > **Nota:** **Precaución** ¡Hay una serie de cosas a tener en cuenta al usar cierres!
 > 
@@ -559,7 +559,7 @@ Usando el objeto `argumentos`, puedes llamar a una función con más argumentos 
 
 Por ejemplo, considera una función que concatena varias cadenas. El único argumento formal para la función es una cadena que especifica los caracteres que separan los elementos a concatenar. La función se define de la siguiente manera. Puedes pasar cualquier número de argumentos a esta función, y concatena cada argumento en una "lista" de cadenas:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion miConcatenacion(separador) {
@@ -582,7 +582,7 @@ consola.escribir(miConcatenacion("; ", "elefante", "jirafa", "leon", "puma"));
 consola.escribir(miConcatenacion(". ", "salvia", "albahaca", "orégano", "pimienta", "perejil"));
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 
 

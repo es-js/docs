@@ -52,7 +52,7 @@ Por ejemplo, `x > 0 ? '+' : '-'`.
 
 Como la mayoría de las expresiones, asignaciones como `x = y` tienen un valor de retorno. El valor retornado (asignado) se puede recuperar asignando la expresión a una variable o registrándola:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut y = 0;
@@ -64,7 +64,7 @@ consola.escribir(z); // Registra el valor de retorno de la asignación x = y
 consola.escribir(x = y); // Registra el valor de retorno directamente
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 El valor de retorno coincide con la expresión a la derecha del signo `=` en la columna "Significado" de la tabla anterior. Eso significa que `(x = y)` devuelve `y`, `(x += y)` devuelve la suma resultante `x + y`, `(x **= y)` devuelve la potencia resultante `x ** y`, y así sucesivamente.
 
@@ -81,7 +81,7 @@ Al encadenar estas expresiones, cada asignación se evalúa de **derecha a izqui
 
 Para asignaciones más complejas, la sintaxis de `asignación de desestructuración` es una expresión de EsJS que hace posible extraer datos de arreglos u objetos usando una sintaxis que refleja la construcción de arreglos y objetos literales.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut foo = ['one', 'two', 'three'];
@@ -97,7 +97,7 @@ mut tres = foo[2];
 console.escribir(uno, dos, tres);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### Operadores de comparación
 
@@ -208,7 +208,7 @@ El `operador coma` (`,`) simplemente evalúa ambos operandos y devuelve el valor
 
 Por ejemplo, si `a` es un arreglo bidimensional con 10 elementos en un lado, el siguiente código usa el operador `coma` para actualizar dos variables a la vez. El código imprime los valores de los elementos diagonales en el arreglo:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut x = [0,1,2,3,4,5,6,7,8,9]
@@ -219,7 +219,7 @@ para (mut i = 0, j = 9; i <= j; i++, j--) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### Operadores unarios
 
@@ -270,7 +270,7 @@ El operador `tipoDe` devuelve una cadena que indica el tipo de operando no evalu
 
 Supón que defines las siguientes variables:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut myFun = crear Function('5 + 2');
@@ -287,33 +287,33 @@ consola.escribir(tipoDe today);       // devuelve "object"
 consola.escribir(tipoDe doesntExist); // devuelve "undefined"
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Para las palabras clave `verdadero` y `null`, el operador `tipoDe` devuelve los siguientes resultados:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 consola.escribir(tipoDe verdadero); // devuelve "boolean"
 consola.escribir(tipoDe null); // devuelve "object"
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Para un número o cadena, el operador `tipoDe` devuelve los siguientes resultados:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 consola.escribir(tipoDe 62);            // devuelve "number"
 consola.escribir(tipoDe 'Hola mundo');  // devuelve "string"
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Para los valores de propiedad, el operador `tipoDe` devuelve el tipo de valor que contiene la propiedad:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 consola.escribir(tipoDe document.lastModified); // devuelve "string"
@@ -321,11 +321,11 @@ consola.escribir(tipoDe window.length);         // devuelve "number"
 consola.escribir(tipoDe Math.LN2);              // devuelve "number"
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Para métodos y funciones, el operador `tipoDe` devuelve los siguientes resultados:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 consola.escribir(tipoDe Numero.interpretarEntero); // devuelve "function"
@@ -333,11 +333,11 @@ consola.escribir(tipoDe interpretarEntero);    // devuelve "function"
 consola.escribir(tipoDe eval);        // devuelve "function"
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 Para objetos predefinidos, el operador `tipoDe` devuelve los siguientes resultados:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 consola.escribir(tipoDe Fecha);     // devuelve "function"
@@ -347,7 +347,7 @@ consola.escribir(tipoDe Option);   // devuelve "function"
 consola.escribir(tipoDe Cadena);   // devuelve "function"
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 #### `vacio`
 

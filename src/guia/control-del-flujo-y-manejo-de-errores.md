@@ -21,7 +21,7 @@ Las declaraciones de bloque se utilizan comúnmente con declaraciones de control
 
 El siguiente ejemplo comienza declarando una variable `x` con el valor `0`. Luego, mientras `x` sea menor que `10`, ejecuta el bloque de declaración del buclie `mientras`, de manera que muestra en la consola los 10 números del Sistema Decimal:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut x = 0;
@@ -31,7 +31,7 @@ mientras (x < 10) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 En este ejemplo, la declaración de bloque es lo que está entre llaves: 
 
@@ -86,7 +86,7 @@ En el caso de múltiples condiciones, solo se ejecutará la primera condición l
 > 
 > Por ejemplo, _no_ escribas un código como este:
 > 
-> <InlinePlayground>
+> <EsEditor>
 >
 > ```esjs
 > // Propenso a ser mal interpretado como "x == 1"
@@ -96,11 +96,11 @@ En el caso de múltiples condiciones, solo se ejecutará la primera condición l
 > }
 > ```
 > 
-> </InlinePlayground>
+> </EsEditor>
 >
 > Si necesitas usar una tarea en una expresión condicional, una práctica común es poner paréntesis adicionales alrededor de la asignación, así:
 > 
-> <InlinePlayground>
+> <EsEditor>
 >
 > ```esjs
 > // Propenso a ser mal interpretado como "x == 1"
@@ -110,11 +110,11 @@ En el caso de múltiples condiciones, solo se ejecutará la primera condición l
 > }
 > ```
 > 
-> </InlinePlayground>
+> </EsEditor>
 >
 > O mejor aún, mueve la expresión de asignación afuera de la expresión `si`, y sólo utiliza expresiones condicionales:
 > 
-> <InlinePlayground>
+> <EsEditor>
 >
 > ```esjs
 > mut x = 0;
@@ -126,7 +126,7 @@ En el caso de múltiples condiciones, solo se ejecutará la primera condición l
 > }
 > ```
 >
-> </InlinePlayground>
+> </EsEditor>
 
 #### Valores falsos
 
@@ -142,7 +142,7 @@ Los siguientes valores se evalúan como `falso` (también conocidos como valores
 Todos los demás valores, incluidos todos los objetos, se evalúan como `verdadero` cuando se pasan a una declaración condicional.
 
 > **Nota:** **Precaución**: ¡No confundas los valores booleanos primitivos `verdadero` y `falso` con los valores `verdadero` y `falso` del objeto [`Booleano`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean)!. Por ejemplo:
-> <InlinePlayground>
+> <EsEditor>
 > 
 > ```esjs
 > mut b = crear Booleano(falso);
@@ -154,14 +154,14 @@ Todos los demás valores, incluidos todos los objetos, se evalúan como `verdade
 > }
 > ```
 > 
-> </InlinePlayground>
+> </EsEditor>
 
 
 ##### Ejemplo
 
 En el siguiente ejemplo, la función `comprobarDato` devuelve `verdadero` si el número de caracteres del objeto `Cadena` es igual a 3 (tres). De lo contrario, muestra una alerta y devuelve `falso`.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion comprobarDato(valorIngresado) {
@@ -183,7 +183,7 @@ consola.escribir('hola:');
 consola.escribir(comprobarDato('hola'));
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### Declaración `elegir`
 
@@ -222,7 +222,7 @@ La declaración opcional `romper` asociada con cada cláusula `caso` asegura que
 
 En el siguiente ejemplo, si `tipoDeFruta` se evalúa como '`Bananas`', el programa hace coincidir el valor con el caso '`Bananas`' y ejecuta la declaración asociada. Cuando se encuentra `romper`, el programa sale del `elegir` y continúa la ejecución de la instrucción que sigue a `elegir`. Si se omitiera `romper`, también se ejecutará la instrucción para `caso 'Cerezas'`.
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut tipoDeFruta = 'Mangos';
@@ -253,7 +253,7 @@ elegir (tipoDeFruta) {
 consola.escribir("¿Hay algo más que quieras?");
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Expresiones de manejo de excepciones
 
@@ -293,7 +293,7 @@ lanzar Error('Error interno: código 1234'); // tipo Error
 
 > **Nota:** Puedes especificar un objeto cuando lanzas una excepción. A continuación, puedes hacer referencia a las propiedades del objeto en el bloque `capturar`.
 > 
-> <InlinePlayground>
+> <EsEditor>
 >
 > ```esjs
 > // Crea un objeto tipo de ExcepcionUsuario
@@ -312,7 +312,7 @@ lanzar Error('Error interno: código 1234'); // tipo Error
 > lanzar crear ExcepcionUsuario("Valor muy alto");
 > ```
 > 
-> </InlinePlayground>
+> </EsEditor>
 
 ### Declaración `intentar...lanzar`
 
@@ -326,7 +326,7 @@ En otras palabras, deseas que el bloque `intentar` tenga éxito, pero si no es a
 
 El siguiente ejemplo usa una instrucción `intentar...lanzar`. El ejemplo llama a una función que recupera el nombre de un mes de un arreglo en función del valor pasado a la función. Si el valor no corresponde a un número de mes (`1`\-`12`), se lanza una excepción con el valor "`MesInvalido`" y pasan a ejecutarse las declaraciones del bloque `capturar`. Puedes modificar el valor de la constante `miMes` con un número inválido para experimentar este comportamiento.
 
-<InlinePlayground only-playground>
+<EsEditor hide-slot hide-editor="false">
 
 ```esjs
 
@@ -366,7 +366,7 @@ intentar {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 #### El bloque `capturar`
 
@@ -418,7 +418,7 @@ intentar {
 
 Si el bloque `finalmente` devuelve un valor, este valor se convierte en el valor de retorno de toda la producción de `intentar...capturar...finalmente`, independientemente de las declaraciones `retornar` en los bloques `intentar` y `capturar`:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion f() {
@@ -441,11 +441,11 @@ funcion f() {
 consola.escribir(f()); // 0, 1, 3, falso
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 La sobrescritura de los valores devueltos por el bloque `finalmente` también se aplica a las excepciones lanzadas o relanzadas dentro del bloque `capturar`:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion f() {
@@ -475,7 +475,7 @@ intentar {
 // falso
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 #### Declaraciones `intentar...lanzar` anidadas
 
@@ -498,7 +498,7 @@ Si estás lanzando tus propias excepciones, para aprovechar estas propiedades (p
 
 Por ejemplo:
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion hacerAlgoPropensoAErrores() {
@@ -517,4 +517,4 @@ intentar {
 
 ```
 
-</InlinePlayground>
+</EsEditor>

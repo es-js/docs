@@ -10,7 +10,7 @@ mientras (condicion) {
 
 ## Ejemplo
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut i = 0;
@@ -21,4 +21,4 @@ mientras (i < 5) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>

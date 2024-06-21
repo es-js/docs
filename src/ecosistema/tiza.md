@@ -10,7 +10,7 @@ Las funciones de formateo se utilizan para darle formato a un texto.
 
 Escribe un mensaje en la terminal en negrita.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { tiza } desde "@es-js/tiza"
@@ -19,13 +19,13 @@ importar { Terminal } desde "@es-js/terminal"
 Terminal.escribir(tiza.negrita("Hola mundo desde EsJS"))
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### opaco
 
 Escribe un mensaje en la terminal opaco.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { tiza } desde "@es-js/tiza"
@@ -34,13 +34,13 @@ importar { Terminal } desde "@es-js/terminal"
 Terminal.escribir(tiza.opaco("Hola mundo desde EsJS"))
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### cursiva
 
 Escribe un mensaje en la terminal en cursiva.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { tiza } desde "@es-js/tiza"
@@ -49,13 +49,13 @@ importar { Terminal } desde "@es-js/terminal"
 Terminal.escribir(tiza.cursiva("Hola mundo desde EsJS"))
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### subrayado
 
 Escribe un mensaje en la terminal subrayado.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { tiza } desde "@es-js/tiza"
@@ -64,13 +64,13 @@ importar { Terminal } desde "@es-js/terminal"
 Terminal.escribir(tiza.subrayado("Hola mundo desde EsJS"))
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### tachado
 
 Escribe un mensaje en la terminal tachado.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { tiza } desde "@es-js/tiza"
@@ -79,13 +79,13 @@ importar { Terminal } desde "@es-js/terminal"
 Terminal.escribir(tiza.tachado("Hola mundo desde EsJS"))
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ### invertido
 
 Escribe un mensaje en la terminal con el color de fondo y el color de texto invertidos.
 
-<InlinePlayground hide-console hide-preview="false">
+<EsEditor hide-console hide-preview="false">
 
 ```esjs
 importar { tiza } desde "@es-js/tiza"
@@ -94,7 +94,7 @@ importar { Terminal } desde "@es-js/terminal"
 Terminal.escribir(tiza.invertido("Hola mundo desde EsJS"))
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Funciones de color
 
@@ -132,7 +132,7 @@ Las funciones de color permiten aplicar colores al texto o al fondo del texto. L
 | fondoIndigo   | fondoIndigo50 | fondoIndigo100 | fondoIndigo200 | fondoIndigo300 | fondoIndigo400 | fondoIndigo500 | fondoIndigo600 | fondoIndigo700 | fondoIndigo800 | fondoIndigo900 |
 | fondoMorado   | fondoMorado50 | fondoMorado100 | fondoMorado200 | fondoMorado300 | fondoMorado400 | fondoMorado500 | fondoMorado600 | fondoMorado700 | fondoMorado800 | fondoMorado900 |
 
-<InlinePlayground only-playground hide-preview="false" hide-console="true">
+<EsEditor hide-slot hide-preview="false" hide-console="true">
 
 ```esjs
 importar { tiza } desde "@es-js/tiza"
@@ -153,6 +153,6 @@ Terminal.escribir(
 )
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 

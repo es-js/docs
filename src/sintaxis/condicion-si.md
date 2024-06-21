@@ -20,7 +20,7 @@ si (condicion) {
 
 ## Ejemplo
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 mut edad = 20;
@@ -32,4 +32,4 @@ si (edad >= 18) {
 }
 ```
 
-</InlinePlayground>
+</EsEditor>

@@ -6,7 +6,7 @@ Los comentarios son una forma de agregar texto a nuestro código para que este s
 
 Los comentarios de una línea comienzan con `//` y terminan al final de la línea. Cualquier texto o código que este dentro de estos signos serán ignorados por EsJS (no se ejecutaran).
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 // La siguiente linea de código escribe en pantalla el texto "Hola Mundo"
@@ -14,14 +14,14 @@ Los comentarios de una línea comienzan con `//` y terminan al final de la líne
 consola.escribir("Hola Mundo") // <-- Muestra "Hola Mundo" en la consola
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 
 ## Comentarios de líneas múltiples
 
 Los comentarios de líneas múltiples comienzan con `/*` y terminan con `*/`. Cualquier texto o código que este dentro de estos signos serán ignorados por EsJS (no se ejecutaran).
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 /*
@@ -32,4 +32,4 @@ Los comentarios de líneas múltiples comienzan con `/*` y terminan con `*/`. Cu
 consola.escribir("Hola Mundo")
 ```
 
-</InlinePlayground>
+</EsEditor>

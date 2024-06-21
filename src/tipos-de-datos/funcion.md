@@ -10,7 +10,7 @@ funcion miFuncion() {
 
 ## Ejemplo
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion miFuncion() {
@@ -20,7 +20,7 @@ funcion miFuncion() {
 miFuncion();
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Parámetros (arguments)
 
@@ -34,7 +34,7 @@ funcion miFuncion(parametro1, parametro2) {
 
 ### Ejemplo
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion miFuncion(parametro1, parametro2) {
@@ -44,7 +44,7 @@ funcion miFuncion(parametro1, parametro2) {
 miFuncion(1, 2);
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Retorno (return)
 
@@ -58,7 +58,7 @@ funcion miFuncion() {
 
 ### Ejemplo
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 funcion miFuncion() {
@@ -68,7 +68,7 @@ funcion miFuncion() {
 mut x = miFuncion();
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Funciones anónimas (anonymous functions)
 
@@ -82,7 +82,7 @@ funcion() {
 
 ### Ejemplo
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 (funcion() {
@@ -90,7 +90,7 @@ funcion() {
 })();
 ```
 
-</InlinePlayground>
+</EsEditor>
 
 ## Funciones flecha (arrow functions)
 
@@ -104,7 +104,7 @@ Una función flecha es una alternativa más corta para declarar funciones anóni
 
 ### Ejemplo
 
-<InlinePlayground>
+<EsEditor>
 
 ```esjs
 (() => {
@@ -112,4 +112,4 @@ Una función flecha es una alternativa más corta para declarar funciones anóni
 })();
 ```
 
-</InlinePlayground>
+</EsEditor>

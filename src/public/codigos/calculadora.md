@@ -79,7 +79,7 @@ const plantilla = html`
       <div class="grid grid-cols-3 gap-1 px-3 py-2 mx-auto">
         ${() => [7, 8, 9, 4, 5, 6, 1, 2, 3, ".", 0].map((n) => digito(n))}
         ${() => Object.keys(operaciones).map((n) => operacion(n))}
-        <button class="h-10 text-xs bg-red-100 hover:bg-red-200 rounded" @click="${clear}">Limpiar</button>
+        <button class="h-10 text-xs bg-red-100 hover:bg-red-200 rounded" @click="${limpiar}">Limpiar</button>
         <span></span>
         <button class="p-2 bg-green-100 hover:bg-green-200 rounded" @click="${calcular}">&equals;</button>
       </div>

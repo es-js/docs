@@ -94,7 +94,7 @@ La siguiente tabla resume las propiedades del objeto `Numero`.
 | [`Numero.POSITIVE_INFINITY`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY)                                                     | Valor infinito positivo especial; devuelto por desbordamiento                                                                                                                                                         |
 | [`Numero.EPSILON` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON "Currently only available in English (US)")                   | Diferencia entre `1` y el valor más pequeño mayor que `1` que se puede representar como un [`Numero`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number) (`2.220446049250313e-16`) |
 | [`Numero.MIN_SAFE_INTEGER` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER "Currently only available in English (US)") | Número entero seguro mínimo en EsJS (−253 + 1 o `−9007199254740991`)                                                                                                                                                  |
-| [`Numero.MAX_SAFE_INTEGER`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)                                                       | Máximo número entero seguro en EsJS (+253 - 1 o `+9007199254740991`)                                                                                                                                            |
+| [`Numero.MAX_SAFE_INTEGER`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)                                                       | Máximo número entero seguro en EsJS (+253 - 1 o `+9007199254740991`)                                                                                                                                                  |
 
 | Método                                                                                                                         | Descripción                                                                                                                                                                                                                    |
 |--------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -107,11 +107,11 @@ La siguiente tabla resume las propiedades del objeto `Numero`.
 
 El prototipo `Numero` proporciona métodos para recuperar información de objetos `Numero` en varios formatos. La siguiente tabla resume los métodos de `Numero.prototype`.
 
-| Método | Descripción |
-| --- | --- |
-| [`toExponential()` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential "Currently only available in English (US)") | Devuelve una cadena que representa el número en notación exponencial. |
-| [`toFixed()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) | Devuelve una cadena que representa el número en notación de punto fijo. |
-| [`toPrecision()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision) | Devuelve una cadena que representa el número con una precisión especificada en notación de punto fijo. |
+| Método                                                                                                                                                                        | Descripción                                                                                            |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| [`toExponential()` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential "Currently only available in English (US)") | Devuelve una cadena que representa el número en notación exponencial.                                  |
+| [`toFixed()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)                                                                   | Devuelve una cadena que representa el número en notación de punto fijo.                                |
+| [`toPrecision()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision)                                                           | Devuelve una cadena que representa el número con una precisión especificada en notación de punto fijo. |
 
 ## El objeto `Mate`
 
@@ -170,9 +170,9 @@ Llamar a `Fecha` sin la palabra clave `crear` devuelve una cadena que representa
 Los parámetros de la sintaxis anterior pueden ser cualquiera de los siguientes:
 
 -   Nada: crea la fecha y hora de hoy. Por ejemplo, `hoy = crear Fecha();`.
--   Una cadena que representa una fecha en la siguiente forma: "Mes día, año horas:minutos:segundos." Por ejemplo, `mut Xmas95 = crear Fecha("December 25, 1995 13:30:00")`. Si omites horas, minutos o segundos, el valor se establecerá en cero.
--   Un conjunto de valores enteros para año, mes y día. Por ejemplo, `mut Xmas95 = crear Fecha(1995, 11, 25)`.
--   Un conjunto de valores enteros para año, mes, día, hora, minuto y segundos. Por ejemplo, `mut Xmas95 = crear Fecha(1995, 11, 25, 9, 30, 0)`.
+-   Una cadena que representa una fecha en la siguiente forma: "Mes día, año horas:minutos:segundos." Por ejemplo, `mut navidad95 = crear Fecha("December 25, 1995 13:30:00")`. Si omites horas, minutos o segundos, el valor se establecerá en cero.
+-   Un conjunto de valores enteros para año, mes y día. Por ejemplo, `mut navidad95 = crear Fecha(1995, 11, 25)`.
+-   Un conjunto de valores enteros para año, mes, día, hora, minuto y segundos. Por ejemplo, `mut navidad95 = crear Fecha(1995, 11, 25, 9, 30, 0)`.
 
 ### Métodos del objeto `Fecha`
 
@@ -195,57 +195,67 @@ Con los métodos "`obtener`" y "`establecer`" puedes obtener y establecer segund
 Por ejemplo, supongamos que defines la siguiente fecha:
 
 ```esjs
-mut Xmas95 = crear Fecha('December 25, 1995');
+mut navidad95 = crear Fecha('December 25, 1995');
 ```
 
-Entonces, `Xmas95.getMonth()` devuelve 11 y `Xmas95.getFullYear()` devuelve 1995.
+Entonces, `navidad95.obtenerMes()` devuelve 11 y `navidad95.obtenerAño()` devuelve 1995.
 
-Los métodos `getTime` y `setTime` son útiles para comparar fechas. El método `getTime` devuelve el número de milisegundos desde el 1 de enero de 1970, 00:00:00 para un objeto `Fecha`.
+Los métodos `obtenerTiempo` y `establecerTiempo` son útiles para comparar fechas. El método `obtenerTiempo` devuelve el número de milisegundos desde el 1 de enero de 1970, 00:00:00 para un objeto `Fecha`.
 
 Por ejemplo, el siguiente código muestra el número de días que quedan en el año actual:
 
 ```esjs
-mut hoy = crear Fecha();
-mut endYear = crear Fecha(1995, 11, 31, 23, 59, 59, 999); // Establece día y mes
-endYear.setFullYear(hoy.getFullYear()); // Establece año a este año
-mut msPerDay = 24 * 60 * 60 * 1000; // Número de milisegundos por día
-mut daysLeft = (endYear.getTime() - hoy.getTime()) / msPerDay;
-mut daysLeft = Mate.round(daysLeft); // devuelve los días que quedan en el año
+mut hoy = crear Fecha() // Crea un objeto Fecha con la fecha y hora actuales
+
+mut finAño = crear Fecha(1995, 11, 31, 23, 59, 59, 999) // Crea un objeto Fecha para el 31 de diciembre de 1995
+finAño.establecerAño(hoy.obtenerAño()) // Establece el año en el año actual
+
+mut msPorDia = 24 * 60 * 60 * 1000 // Número de milisegundos por día
+mut diasRestantes = (finAño.obtenerTiempo() - hoy.obtenerTiempo()) / msPorDia
+mut dias = Mate.redondear(diasRestantes) // devuelve los días que quedan en el año
+
+consola.escribir(dias)
 ```
 
-Este ejemplo crea un objeto `Fecha` llamado `hoy` que contiene la fecha de hoy. Luego crea un objeto `Fecha` llamado `endYear` y establece el año en el año actual. Luego, usando la cantidad de milisegundos por día, calcula la cantidad de días entre `hoy` y `endYear`, usando `getTime` y redondeando a un número entero de días.
+Este ejemplo crea un objeto `Fecha` llamado `hoy` que contiene la fecha de hoy. Luego crea un objeto `Fecha` llamado `finAño` y establece el año en el año actual. Luego, usando la cantidad de milisegundos por día, calcula la cantidad de días entre `hoy` y `finAño`, usando `obtenerTiempo` y redondeando a un número entero de días.
 
-El método `interpretar` es útil para asignar valores de cadenas de fecha a objetos `Fecha` existentes. Por ejemplo, el siguiente código usa `interpretar` y `setTime` para asignar un valor de fecha al objeto `IPOdate`:
+El método `interpretar` es útil para asignar valores de cadenas de fecha a objetos `Fecha` existentes. Por ejemplo, el siguiente código usa `interpretar` y `establecerTiempo` para asignar un valor de fecha al objeto `fechaIPO`:
 
 ```esjs
-mut IPOdate = crear Fecha();
-IPOdate.setTime(Date.parse('Aug 9, 1995'));
+mut fechaIPO = crear Fecha();
+fechaIPO.establecerTiempo(Date.parse('Aug 9, 1995'));
 ```
 
 ### [Ejemplo](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Numbers_and_dates#ejemplo)
 
-En el siguiente ejemplo, la función `JSClock()` devuelve la hora en el formato de un reloj digital.
+En el siguiente ejemplo, la función `reloj()` devuelve la hora en el formato de un reloj digital.
 
 ```esjs
-function JSClock() {
-  mut time = crear Fecha();
-  mut hour = time.getHours();
-  mut minute = time.getMinutes();
-  mut second = time.getSeconds();
-  mut temp = '' + ((hour > 12) ? hour - 12 : hour);
-  if (hour == 0)
-    temp = '12';
-  temp += ((minute < 10) ? ':0' : ':') + minute;
-  temp += ((second < 10) ? ':0' : ':') + second;
-  temp += (hour >= 12) ? ' P.M.' : ' A.M.';
-  return temp;
+funcion reloj() {
+  mut ahora = crear Fecha()
+
+  mut hora = ahora.obtenerHoras()
+  mut minuto = ahora.obtenerMinutos()
+  mut segundo = ahora.obtenerSegundos()
+
+  mut temporal = "" + (hora > 12 ? hora - 12 : hora)
+  si (hora == 0) {
+    temporal = "12"
+  }
+  temporal += (minuto < 10 ? ":0" : ":") + minuto
+  temporal += (segundo < 10 ? ":0" : ":") + segundo
+  temporal += hora >= 12 ? " P.M." : " A.M."
+
+  retornar temporal
 }
+
+consola.escribir(reloj())
 ```
 
-La función `JSClock` primero crea un nuevo objeto `Fecha` llamado `time`; dado que no se dan argumentos, la hora se crea con la fecha y hora actuales. Luego, las llamadas a los métodos `getHours`, `getMinutes` y `getSeconds` asignan el valor de la hora, minuto y segundo actuales a `hour`, `minute` y `second`.
+La función `reloj` primero crea un nuevo objeto `Fecha` llamado `ahora`; dado que no se dan argumentos, la hora se crea con la fecha y hora actuales. Luego, las llamadas a los métodos `obtenerHoras`, `obtenerMinutos` y `obtenerSegundos` asignan el valor de la hora, minuto y segundo actuales a `hora`, `minuto` y `segundo`.
 
-Las siguientes cuatro declaraciones crean un valor de cadena basado en el tiempo. La primera declaración crea una variable `temp`, asignándole un valor mediante una expresión condicional; si `hour` es mayor que 12, (`hour - 12`), de lo contrario, simplemente hora, a menos que la hora sea 0, en cuyo caso se convierte en 12.
+Las siguientes cuatro declaraciones crean un valor de cadena basado en el tiempo. La primera declaración crea una variable `temporal`, asignándole un valor mediante una expresión condicional; si `hora` es mayor que 12, (`hora - 12`), de lo contrario, simplemente hora, a menos que la hora sea 0, en cuyo caso se convierte en 12.
 
-La siguiente declaración agrega un valor de `minute` a `temp`. Si el valor de `minute` es menor que 10, la expresión condicional agrega una cadena con un cero precedente; de lo contrario, agrega una cadena con dos puntos de demarcación. Luego, una declaración agrega un valor de segundos a `temp` de la misma manera.
+La siguiente declaración agrega un valor de `minuto` a `temporal`. Si el valor de `minuto` es menor que 10, la expresión condicional agrega una cadena con un cero precedente; de lo contrario, agrega una cadena con dos puntos de demarcación. Luego, una declaración agrega un valor de segundos a `temporal` de la misma manera.
 
-Finalmente, una expresión condicional agrega "P.M." a `temp` si `hour` es 12 o mayor; de lo contrario, agrega "A.M." a `temp`.
+Finalmente, una expresión condicional agrega "P.M." a `temporal` si `hora` es 12 o mayor; de lo contrario, agrega "A.M." a `temporal`.

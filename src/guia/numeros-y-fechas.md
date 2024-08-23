@@ -204,6 +204,8 @@ Los métodos `obtenerTiempo` y `establecerTiempo` son útiles para comparar fech
 
 Por ejemplo, el siguiente código muestra el número de días que quedan en el año actual:
 
+<EsEditor>
+
 ```esjs
 mut hoy = crear Fecha() // Crea un objeto Fecha con la fecha y hora actuales
 
@@ -217,6 +219,9 @@ mut dias = Mate.redondear(diasRestantes) // devuelve los días que quedan en el 
 consola.escribir(dias)
 ```
 
+</EsEditor>
+
+
 Este ejemplo crea un objeto `Fecha` llamado `hoy` que contiene la fecha de hoy. Luego crea un objeto `Fecha` llamado `finAño` y establece el año en el año actual. Luego, usando la cantidad de milisegundos por día, calcula la cantidad de días entre `hoy` y `finAño`, usando `obtenerTiempo` y redondeando a un número entero de días.
 
 El método `interpretar` es útil para asignar valores de cadenas de fecha a objetos `Fecha` existentes. Por ejemplo, el siguiente código usa `interpretar` y `establecerTiempo` para asignar un valor de fecha al objeto `fechaIPO`:
@@ -226,9 +231,11 @@ mut fechaIPO = crear Fecha();
 fechaIPO.establecerTiempo(Date.parse('Aug 9, 1995'));
 ```
 
-### [Ejemplo](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Numbers_and_dates#ejemplo)
+### Ejemplo: Reloj digital
 
 En el siguiente ejemplo, la función `reloj()` devuelve la hora en el formato de un reloj digital.
+
+<EsEditor>
 
 ```esjs
 funcion reloj() {
@@ -251,6 +258,9 @@ funcion reloj() {
 
 consola.escribir(reloj())
 ```
+
+</EsEditor>
+
 
 La función `reloj` primero crea un nuevo objeto `Fecha` llamado `ahora`; dado que no se dan argumentos, la hora se crea con la fecha y hora actuales. Luego, las llamadas a los métodos `obtenerHoras`, `obtenerMinutos` y `obtenerSegundos` asignan el valor de la hora, minuto y segundo actuales a `hora`, `minuto` y `segundo`.
 

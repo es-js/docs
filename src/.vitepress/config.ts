@@ -97,6 +97,17 @@ export default async () => {
         },
       ],
     },
+
+    {
+      text: 'Integraciones',
+      items: [
+        {
+          items: [
+            { text: 'Hono + Knex + MySQL', link: '/integraciones/hono-knex-mysql' },
+          ],
+        },
+      ],
+    },
   ]
 
   return defineConfigWithTheme(

@@ -237,6 +237,11 @@ export default async () => {
         sitemap.end()
         await new Promise(resolve => writeStream.on('finish', resolve))
       },
+
+      ignoreDeadLinks: [
+        // ignore all localhost links
+        /^https?:\/\/localhost/,
+      ],
     },
   )
 }

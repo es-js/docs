@@ -210,14 +210,14 @@ La instalación manual puede realizarse utilizando [Babel](https://babeljs.io/) 
         <img src="${viteLogo}" class="logo" alt="Vite logo" />
       </a>
       <a href="https://es.js.org" target="_blank">
-        <img src="https://es.js.org/assets/logo.png" class="logo vanilla esjs" alt="EsJs logo" />
+        <img src="https://es.js.org/assets/logo.png" class="logo vanilla esjs" alt="EsJS logo" />
       </a>
-      <h1>Hola Vite + EsJs!</h1>
+      <h1>Hola Vite + EsJS!</h1>
       <div class="card">
         <button id="counter" type="button"></button>
       </div>
       <p class="read-the-docs">
-        Clic en EsJs logo para más información.
+        Clic en EsJS logo para más información.
       </p>
     </div>
   `

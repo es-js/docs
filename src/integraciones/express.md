@@ -30,7 +30,7 @@
     ```
 
     - `src/app.esjs`: Archivo principal de la aplicación.
-    - `src/otro-archivo.esjs`: Módulo esjs.
+    - `src/otro-archivo.esjs`: Módulo EsJS.
     - `vite.config.js`: Archivo de configuración de Vite.
 
 2. Instalar dependencias:

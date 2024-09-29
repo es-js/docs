@@ -364,8 +364,8 @@ La instalación manual puede realizarse utilizando [Babel](https://babeljs.io/) 
 
 Te recomendamos algunas integraciones para que puedas continuar aprendiendo sobre EsJS:
 
-- [Instalación EsJS + Express](./integraciones/express-esjs.md)
-- [Instalación Hono + Knex + MySql](./integraciones/hono-knex-mysql.md)
+- [Instalación EsJS + Express](./integraciones/express.md)
+- [Instalación EsJS + Hono + Knex + MySql](./integraciones/hono-knex-mysql.md)
 
 ## Tutorial Interactivo
 

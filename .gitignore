@@ -12,3 +12,4 @@ pnpm-global
 TODOs.md
 cache
 .vercel
+package-lock.json

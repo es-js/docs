@@ -104,6 +104,7 @@ export default async () => {
         {
           items: [
             { text: 'Hono + Knex + MySQL', link: '/integraciones/hono-knex-mysql' },
+            { text: 'EsJs + Express', link: '/integraciones/express-esjs' }
           ],
         },
       ],

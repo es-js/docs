@@ -103,8 +103,8 @@ export default async () => {
       items: [
         {
           items: [
+            { text: 'EsJS + Express', link: '/integraciones/express' },
             { text: 'Hono + Knex + MySQL', link: '/integraciones/hono-knex-mysql' },
-            { text: 'EsJS + Express', link: '/integraciones/express-esjs' }
           ],
         },
       ],

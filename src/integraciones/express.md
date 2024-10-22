@@ -118,13 +118,14 @@
   importar httpDevServer desde 'vavite/http-dev-server'
 
   const servidor = express()
-  const puerto = process.env.PORT || 4500
+  mut puerto = process.env.PORT || 4500
 
   servidor.use('/', (req, res) => {
     res.send('¡Hola, mundo hispano hablante!')
   })
 
   si (httpDevServer) {
+    puerto = httpDevServer.address().port
     httpDevServer.on('request', servidor)
     consola.escribir(`Servidor corriendo en el puerto ${puerto}`)
   }

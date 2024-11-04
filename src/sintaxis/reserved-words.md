@@ -1,7 +1,7 @@
 ## Palabras reservadas de control (Control Keywords)
 
 | EsJS        | JavaScript  |
-|-------------| ----------- |
+| ----------- | ----------- |
 | capturar    | catch       |
 | caso        | case        |
 | con         | with        |
@@ -17,7 +17,6 @@
 | para        | for         |
 | retornar    | return      |
 | sino        | else        |
-| osi         | else if     |
 | si          | if          |
 | constructor | constructor |
 | eliminar    | delete      |
@@ -56,7 +55,6 @@
 | Infinito       | Infinity   |
 | NuN            | NaN        |
 | ambienteGlobal | globalThis |
-| esNuN          | isNaN      |
 
 ## Funciones de soporte (Support Functions)
 
@@ -147,9 +145,9 @@
 
 | EsJS               | JavaScript     |
 | ------------------ | -------------- |
+| esNuN              | isNaN          |
 | esFinito           | isFinite       |
 | esEntero           | isInteger      |
-| esNuN              | isNaN          |
 | esEnteroSeguro     | isSafeInteger  |
 | interpretarDecimal | parseFloat     |
 | interpretarEntero  | parseInt       |

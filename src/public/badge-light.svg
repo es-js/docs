@@ -1,0 +1,18 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" width="100" height="30">
+	<title>badge</title>
+	<defs>
+		<image width="1024" height="1024" id="img1" href="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTAyNCI+Cgk8dGl0bGU+UHJveWVjdG8gbnVldm88L3RpdGxlPgoJPHN0eWxlPgoJCS5zMCB7IGZpbGw6ICM1MTJkYTggfSAKCQkuczEgeyBmaWxsOiAjZmZmZmZmIH0gCgk8L3N0eWxlPgoJPHBhdGggaWQ9IkZvcm1hIDIiIGNsYXNzPSJzMCIgZD0ibTAgMzNjMC0xOC4yIDE0LjgtMzMgMzMtMzNoOTU4YzE4LjIgMCAzMyAxNC44IDMzIDMzdjk1OGMwIDE4LjItMTQuOCAzMy0zMyAzM2gtOTU4Yy0xOC4yIDAtMzMtMTQuOC0zMy0zM3oiLz4KCTxwYXRoIGlkPSJFc0pTICIgY2xhc3M9InMxIiBhcmlhLWxhYmVsPSJFc0pTCiIgIGQ9Im0yODMuNyA5MjRoMTg2Ljh2LTQ4LjJoLTEyOC40di02NmgxMTguMnYtNDguMWgtMTE4LjJ2LTY1LjloMTI3Ljh2LTQ4LjJoLTE4Ni4yem00MDQuMi0xNDguMWMtNS4yLTM4LjItMzUuOS02MS44LTg4LjMtNjEuOC01MyAwLTg4IDI0LjUtODcuOCA2NC41LTAuMiAzMSAxOS40IDUxLjEgNTkuOSA1OS4ybDM1LjkgNy4yYzE4LjEgMy42IDI2LjMgMTAuMiAyNi42IDIwLjYtMC4zIDEyLjMtMTMuNyAyMS4xLTMzLjggMjEuMS0yMC41IDAtMzQuMS04LjgtMzcuNi0yNS43bC01Ni42IDNjNS40IDM5LjcgMzkuMiA2NC4xIDk0LjEgNjQuMSA1My43IDAgOTIuMi0yNy40IDkyLjMtNjguMy0wLjEtMzAtMTkuNy00Ny45LTU5LjktNTYuMWwtMzcuNS03LjZjLTE5LjMtNC4yLTI2LjUtMTAuOC0yNi40LTIwLjgtMC4xLTEyLjQgMTMuOS0yMC41IDMxLjgtMjAuNSAxOS45IDAgMzEuOCAxMC45IDM0LjYgMjQuM3ptODkgMi43djEwMS40Yy0wLjEgMTQtNi4zIDIxLjQtMTcuNyAyMS40LTEwLjcgMC0xNy43LTYuNy0xNy45LTE4LjJoLTMwLjZjLTAuMSAyOSAyMC42IDQyLjkgNDcgNDIuOSAyOS40IDAgNDkuNS0xNy45IDQ5LjYtNDYuMXYtMTAxLjR6bTEzNC43IDQxLjloMjkuNGMtMC40LTI2LTIxLjctNDMuOS01NC4xLTQzLjktMzEuOSAwLTU1LjIgMTcuNi01NS4xIDQ0LjEtMC4xIDIxLjQgMTUuMSAzMy43IDM5LjYgMzkuNmwxNS45IDRjMTUuOCAzLjggMjQuNiA4LjQgMjQuNyAxOC4yLTAuMSAxMC42LTEwLjIgMTcuOS0yNS44IDE3LjktMTYgMC0yNy41LTcuNC0yOC41LTIyaC0yOS43YzAuNyAzMS41IDIzLjMgNDcuNyA1OC42IDQ3LjcgMzUuNSAwIDU2LjMtMTYuOSA1Ni40LTQzLjYtMC4xLTI0LjItMTguMy0zNy00My42LTQyLjdsLTEzLjEtMy4yYy0xMi42LTIuOS0yMy4yLTcuNi0yMy0xOCAwLTkuNCA4LjMtMTYuMyAyMy40LTE2LjMgMTQuNyAwIDIzLjcgNi43IDI0LjkgMTguMnoiLz4KPC9zdmc+"/>
+	</defs>
+	<style>
+		.s0 { fill: #f5f5f5 } 
+		.s1 { fill: #eeeeee } 
+		.s2 { fill: #000000 } 
+	</style>
+	<g id="light">
+		<path id="Forma 1" fill-rule="evenodd" class="s0" d="m100 0v30h-62v-30z"/>
+		<path id="Forma 2" fill-rule="evenodd" class="s1" d="m38 0v30h-38v-30z"/>
+		<path id="EsJS" class="s2" aria-label="EsJS"  d="m48.6 22h9.2v-1.9h-7v-4.4h6.4v-1.9h-6.4v-4.5h6.9v-1.8h-9.1zm20.1-8.3c-0.5-1.7-1.8-2.8-4.2-2.8-2.4 0-4.2 1.3-4.2 3.2 0 1.6 1 2.6 3 3.1l1.9 0.4c1 0.2 1.5 0.7 1.5 1.4 0 0.8-0.9 1.5-2.3 1.5-1.3 0-2.1-0.6-2.3-1.7l-2.1 0.4c0.4 1.9 2 3 4.4 3 2.6 0 4.5-1.4 4.5-3.4 0-1.5-1-2.5-3-3l-1.7-0.4c-1.2-0.2-1.8-0.6-1.8-1.4 0-0.8 0.9-1.4 2.2-1.4 1.3 0 1.9 0.7 2.1 1.4zm8.4-6.2v10.3c0 1.6-0.8 2.5-2.2 2.5-1.3 0-2.2-0.7-2.2-1.9h-2.1c0 2.4 1.8 3.8 4.3 3.8 2.6 0 4.4-1.6 4.4-4.4v-10.3zm13.3 3.8h2.1c0-2.4-2.1-4-5.1-4-2.9 0-5.1 1.6-5.1 4.1 0 2.1 1.4 3.2 3.8 3.9l1.7 0.4c1.5 0.5 2.7 1 2.7 2.3 0 1.4-1.3 2.3-3.2 2.3-1.7 0-3.1-0.7-3.2-2.3h-2.2c0.1 2.6 2.2 4.2 5.4 4.2 3.5 0 5.4-1.8 5.4-4.2 0-2.6-2.3-3.7-4.2-4.1l-1.4-0.4c-1.1-0.3-2.6-0.8-2.6-2.2 0-1.2 1.1-2.2 2.9-2.2 1.7 0 2.9 0.8 3 2.2z"/>
+		<use id="logo" href="#img1" transform="matrix(.025,0,0,.025,6,2)"/>
+		<path id="Forma 3" fill-rule="evenodd" class="s2" d="m37.5 0h1v30h-1z"/>
+	</g>
+</svg>

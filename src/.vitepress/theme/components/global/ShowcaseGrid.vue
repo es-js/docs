@@ -14,7 +14,7 @@ const { src } = defineProps({
   <ClientOnly>
     <div class="w-full max-w-4xl mx-auto p-3">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div v-for="(item, idx) of ejemplos" :key="idx">
+        <div v-for="(item, idx) of ejemplos.reverse()" :key="idx">
           <a :href="item.link" target="_blank" class="min-h-full flex flex-col p-3 space-y-2 bg-gray-50 dark:bg-gray-800 dark:text-gray-100 rounded hover:bg-gray-100 dark:hover:bg-gray-700 group cursor-pointer text-center border dark:border-gray-700">
             <h1 class="font-medium text-xl group-hover:text-indigo-700 dark:group-hover:text-indigo-300">{{ item.name }}</h1>
 

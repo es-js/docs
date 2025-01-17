@@ -26,5 +26,12 @@
     "repository": "https://github.com/enzonotario/esjs-argentina-datos-api",
     "description": "API pública de datos de Argentina",
     "tags": ["esjs", "servidor"]
+  },
+  {
+    "name": "CreadorCraft",
+    "link": "https://creadorcraftcp.blogspot.com/?ref=es.js.org",
+    "repository": "https://github.com/Creadores-Program/CreadorCraft-Arcade",
+    "description": "Tu plataforma para crear y compartir juegos increíbles!",
+    "tags": ["esjs", "runtime"]
   }
 ]

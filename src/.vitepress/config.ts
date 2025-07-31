@@ -2,9 +2,16 @@ import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
 import { defineConfigWithTheme } from 'vitepress'
-// @ts-expect-error - esjsSyntax is a json file
-import esjsSyntax from '@es-js/language-tools/esjs.tmLanguage.json' assert {type: 'json'}
+import { fileURLToPath } from 'node:url'
 import { metaData } from './constants'
+import { readFileSync } from 'node:fs'
+
+const esjsSyntax = JSON.parse(
+  readFileSync(
+    fileURLToPath(new URL('../../node_modules/@es-js/language-tools/dist/esjs.tmLanguage.json', import.meta.url)),
+    'utf8'
+  )
+)
 
 const isDev: boolean = process.env.NODE_ENV === 'development'
 const gtagId: string = isDev ? 'G-TEST' : 'G-0XH36H9K3M'
@@ -208,8 +215,8 @@ export default async () => {
         ],
 
         footer: {
-          message: 'Publicado bajo licencia MIT.',
-          copyright: 'Copyright © 2022-presente Enzo Notario',
+          message: 'Publicado bajo <a href="https://github.com/es-js/esjs/blob/main/LICENSE" target="_blank" rel="noopener">licencia MIT</a>.',
+          copyright: 'Copyright © 2022-presente <a href="https://enzonotario.me" target="_blank" rel="noopener">Enzo Notario</a>',
         },
 
         algolia: {

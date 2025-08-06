@@ -3,7 +3,7 @@
     "name": "Ta Te Ti (Tic Tac Toe)",
     "link": "https://tateti-esvue.vercel.app/?ref=es.js.org",
     "repository": "https://github.com/enzonotario/tateti-esvue",
-    "description": "Juego ecrito en EsVue + EsJS",
+    "description": "Juego escrito en EsVue + EsJS",
     "tags": ["esjs", "esvue"]
   },
   {

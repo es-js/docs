@@ -1,3 +1,35 @@
+<script setup>
+import { VPTeamMembers } from 'vitepress/theme'
+
+const members = [
+  {
+    avatar: 'https://www.github.com/enzonotario.png',
+    name: 'Enzo Notario',
+    title: 'Creador',
+    links: [
+      { icon: 'github', link: 'https://github.com/enzonotario' },
+      { icon: 'twitter', link: 'https://twitter.com/enzonotario_' }
+    ]
+  },
+  {
+    avatar: 'https://www.github.com/Trollhunters501PC.png',
+    name: 'Trollhunters501PC',
+    title: 'Colaborador',
+    links: [
+      { icon: 'github', link: 'https://github.com/Trollhunters501PC' },
+    ]
+  },
+  {
+    avatar: 'https://www.github.com/AntaresGT.png',
+    name: 'AntaresGT',
+    title: 'Colaborador',
+    links: [
+      { icon: 'github', link: 'https://github.com/AntaresGT' },
+    ]
+  },
+]
+</script>
+
 # Introducción
 
 EsJS es un lenguaje de programación que utiliza palabras del idioma español para escribir código. La gramática de EsJS es la misma que la de JavaScript, solo que utiliza tokens del idioma español. Al compilarse, el código EsJS es equivalente al código JavaScript, por lo que puedes utilizarlo en cualquier lugar donde se ejecute JavaScript.
@@ -46,3 +78,9 @@ Es importante entender que el código EsJS que escribimos es transpilado a JavaS
 De esta manera, esta guía enlazará algunos términos/conceptos a documentación que corresponde a JavaScript, pero que también aplican a EsJS, sólo que utilizando tokens en español.
 
 La lista de tokens en español que emplea EsJS, y su equivalencia a JavaScript, puede consultarse en: [Palabras reservadas](./sintaxis/palabras-reservadas).
+
+## Colaboradores
+
+EsJS es un proyecto de código abierto, y cualquier persona puede contribuir al mismo. Si deseas colaborar, puedes hacerlo a través de [GitHub](https://github.com/es-js/esjs).
+
+<VPTeamMembers size="small" :members />

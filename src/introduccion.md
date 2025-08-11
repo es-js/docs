@@ -17,6 +17,8 @@ const members = [
     title: 'Colaborador',
     links: [
       { icon: 'github', link: 'https://github.com/Trollhunters501PC' },
+      { icon: 'youtube', link: 'https://www.youtube.com/@trollhunters501' },
+      { icon: 'discord', link: 'https://discordapp.com/users/951997245375545424' }
     ]
   },
   {
